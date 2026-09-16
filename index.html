@@ -1,273 +1,1571 @@
-<!-- BUTTON GROUP STAGE -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Srilanka MLBB Season 2</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            #1b2b55 0,
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 90% 100%,
+            #401b32 0,
+            transparent 32%
+        ),
+        #080b14;
+
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 35px 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 7px 16px;
+
+    border: 1px solid #f5c451;
+    border-radius: 30px;
+
+    color: #f5c451;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 14px;
+}
+
+.header h1 {
+    font-size: clamp(30px, 5vw, 58px);
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.header h1 span {
+    color: #f5c451;
+}
+
+.header p {
+    margin-top: 9px;
+
+    color: #8993a8;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   TOGGLE BUTTON
+========================= */
+
+.section-toggle {
+    display: flex;
+    justify-content: center;
+
+    margin: 25px 0;
+}
+
+.toggle-btn {
+    width: 320px;
+
+    padding: 16px 20px;
+
+    border: 1px solid #f5c451;
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1c2438,
+            #101522
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.30),
+        0 0 25px rgba(245,196,81,.05);
+
+    transition: .25s;
+}
+
+.toggle-btn:hover {
+    transform: translateY(-3px);
+
+    border-color: #ffe28a;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.40),
+        0 0 30px rgba(245,196,81,.12);
+}
+
+.toggle-btn:active {
+    transform: scale(.98);
+}
+
+.toggle-btn .icon {
+    color: #f5c451;
+
+    font-size: 18px;
+}
+
+.arrow {
+    color: #f5c451;
+
+    font-size: 12px;
+
+    transition: transform .3s;
+}
+
+
+/* =========================
+   COLLAPSIBLE CONTENT
+========================= */
+
+.collapsible {
+    max-height: 0;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    transition:
+        max-height .6s ease,
+        opacity .35s ease,
+        margin .6s ease;
+}
+
+.collapsible.open {
+    max-height: 2500px;
+
+    opacity: 1;
+
+    margin-bottom: 55px;
+}
+
+
+/* =========================
+   GROUPS
+========================= */
+
+.groups {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.group {
+    background: rgba(15,20,34,.94);
+
+    border: 1px solid #252d42;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,.30);
+}
+
+.group-title {
+    padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            90deg,
+            #171e31,
+            #101522
+        );
+
+    border-bottom: 1px solid #252d42;
+}
+
+.group-title h2 {
+    font-size: 20px;
+}
+
+.group-title span {
+    color: #f5c451;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.team-list {
+    padding: 15px;
+}
+
+.team {
+    display: grid;
+
+    grid-template-columns:
+        40px
+        1fr
+        55px
+        60px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    border-radius: 11px;
+
+    background: #111726;
+
+    border: 1px solid transparent;
+
+    transition: .2s;
+}
+
+.team:last-child {
+    margin-bottom: 0;
+}
+
+.team:hover {
+    border-color: #f5c451;
+
+    transform: translateX(3px);
+}
+
+.rank {
+    color: #667188;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.team-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5c451,
+            #b97917
+        );
+
+    color: #111;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 900;
+
+    font-size: 11px;
+
+    flex-shrink: 0;
+}
+
+.team-name {
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.team-sub {
+    color: #667188;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+.stat {
+    text-align: center;
+
+    color: #b8c0d0;
+
+    font-size: 11px;
+}
+
+.stat strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+.qualified {
+    border-color: rgba(245,196,81,.35);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245,196,81,.08),
+            #111726
+        );
+}
+
+.qualified .rank {
+    color: #f5c451;
+}
+
+
+/* =========================
+   PLAYOFF
+========================= */
+
+.playoff-content {
+    padding-top: 10px;
+}
+
+.playoff-title {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.playoff-title h2 {
+    font-size: 28px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.playoff-title p {
+    color: #69748a;
+
+    margin-top: 7px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   BRACKET
+========================= */
+
+.bracket {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        80px
+        1fr
+        80px
+        1fr;
+
+    align-items: center;
+
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+.round {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-around;
+
+    height: 470px;
+
+    position: relative;
+
+    gap: 35px;
+}
+
+.round-title {
+    position: absolute;
+
+    top: -35px;
+
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    color: #69748a;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   MATCH
+========================= */
+
+.match {
+    background: #111726;
+
+    border: 1px solid #293249;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+
+    transition: .2s;
+}
+
+.match:hover {
+    border-color: #f5c451;
+
+    transform: translateY(-2px);
+}
+
+.match-title {
+    background: #181f31;
+
+    padding: 8px 12px;
+
+    color: #68738a;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.player {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 13px;
+
+    border-top: 1px solid #252d40;
+}
+
+.player span:first-child {
+    color: #d9deea;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.score {
+    color: #f5c451;
+
+    font-size: 16px;
+
+    font-weight: 900;
+}
+
+
+/* =========================
+   CONNECTOR
+========================= */
+
+.connector {
+    height: 2px;
+
+    background: #323b52;
+
+    position: relative;
+}
+
+.connector::after {
+    content: "";
+
+    position: absolute;
+
+    right: -1px;
+
+    top: -4px;
+
+    width: 10px;
+    height: 10px;
+
+    border-top: 2px solid #323b52;
+
+    border-right: 2px solid #323b52;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================
+   CHAMPION
+========================= */
+
+.final {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.final-box {
+    width: 100%;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(245,196,81,.13),
+            #111726
+        );
+
+    border: 1px solid #f5c451;
+
+    border-radius: 18px;
+
+    padding: 28px 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 40px rgba(245,196,81,.08);
+}
+
+.trophy {
+    font-size: 44px;
+
+    margin-bottom: 10px;
+}
+
+.final-box h3 {
+    color: #f5c451;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.champion {
+    padding: 18px 10px;
+
+    border-radius: 12px;
+
+    background: rgba(245,196,81,.08);
+
+    border: 1px dashed #7e6630;
+
+    color: #777f90;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    margin-top: 50px;
+
+    color: #4f596d;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 900px) {
+
+    .groups {
+        grid-template-columns: 1fr;
+    }
+
+    .bracket {
+        display: block;
+    }
+
+    .round {
+        height: auto;
+
+        gap: 18px;
+
+        margin-bottom: 50px;
+    }
+
+    .round-title {
+        position: static;
+
+        margin-bottom: 8px;
+    }
+
+    .connector {
+        display: none;
+    }
+
+    .final {
+        margin-top: 10px;
+    }
+}
+
+
+@media(max-width: 500px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .toggle-btn {
+        width: 100%;
+    }
+
+    .team {
+        grid-template-columns:
+            30px
+            1fr
+            40px;
+    }
+
+    .team .stat:last-child {
+        display: none;
+    }
+
+    .team-info {
+        gap: 8px;
+    }
+
+    .logo {
+        width: 31px;
+        height: 31px;
+    }
+
+    .team-name {
+        font-size: 13px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="tag">
+        MOBILE LEGENDS : BANG BANG
+    </div>
+
+    <h1>
+        MLBB <span>TOURNAMENT</span>
+    </h1>
+
+    <p>
+        Srilanka MLBB Season 2 • Tournament
+    </p>
+
+</header>
+
+
+
+<!-- =========================
+     GROUP STAGE BUTTON
+========================= -->
+
 <div class="section-toggle">
-    <button class="toggle-btn" onclick="toggleGroupStage()">
-        <span>🏆</span>
-        GROUP STAGE
-        <span class="arrow" id="groupArrow">▼</span>
+
+    <button
+        class="toggle-btn"
+        onclick="toggleSection('groupStage','groupArrow')"
+    >
+
+        <span class="icon">🏆</span>
+
+        <span>
+            GROUP STAGE
+        </span>
+
+        <span
+            class="arrow"
+            id="groupArrow"
+        >
+            ▼
+        </span>
+
     </button>
+
 </div>
 
-<!-- GROUP STAGE CONTENT -->
-<section class="groups" id="groupStage">
 
-    <!-- GROUP A -->
-    <div class="group">
-        <div class="group-title">
-            <h2>GROUP A</h2>
-            <span>5 TEAMS</span>
-        </div>
 
-        <div class="team-list">
+<!-- =========================
+     GROUP STAGE CONTENT
+========================= -->
 
-            <div class="team qualified">
-                <div class="rank">01</div>
+<section
+    id="groupStage"
+    class="collapsible"
+>
 
-                <div class="team-info">
-                    <div class="logo">A1</div>
-                    <div>
-                        <div class="team-name">Team Alpha</div>
-                        <div class="team-sub">QUALIFIED</div>
-                    </div>
-                </div>
 
-                <div class="stat">
-                    <strong>4</strong>
-                    W
-                </div>
+<div class="groups">
 
-                <div class="stat">
-                    <strong>12</strong>
-                    PTS
-                </div>
-            </div>
 
-            <div class="team qualified">
-                <div class="rank">02</div>
+<!-- =========================
+     GROUP A
+========================= -->
 
-                <div class="team-info">
-                    <div class="logo">A2</div>
-                    <div>
-                        <div class="team-name">Team Blaze</div>
-                        <div class="team-sub">QUALIFIED</div>
-                    </div>
-                </div>
+<div class="group">
 
-                <div class="stat">
-                    <strong>3</strong>
-                    W
-                </div>
+    <div class="group-title">
 
-                <div class="stat">
-                    <strong>9</strong>
-                    PTS
-                </div>
-            </div>
+        <h2>
+            GROUP A
+        </h2>
 
-            <div class="team">
-                <div class="rank">03</div>
+        <span>
+            5 TEAMS
+        </span>
 
-                <div class="team-info">
-                    <div class="logo">A3</div>
-                    <div>
-                        <div class="team-name">Team Nova</div>
-                        <div class="team-sub">GROUP STAGE</div>
-                    </div>
-                </div>
-
-                <div class="stat">
-                    <strong>2</strong>
-                    W
-                </div>
-
-                <div class="stat">
-                    <strong>6</strong>
-                    PTS
-                </div>
-            </div>
-
-            <div class="team">
-                <div class="rank">04</div>
-
-                <div class="team-info">
-                    <div class="logo">A4</div>
-                    <div>
-                        <div class="team-name">Team Storm</div>
-                        <div class="team-sub">GROUP STAGE</div>
-                    </div>
-                </div>
-
-                <div class="stat">
-                    <strong>1</strong>
-                    W
-                </div>
-
-                <div class="stat">
-                    <strong>3</strong>
-                    PTS
-                </div>
-            </div>
-
-            <div class="team">
-                <div class="rank">05</div>
-
-                <div class="team-info">
-                    <div class="logo">A5</div>
-                    <div>
-                        <div class="team-name">Team Titan</div>
-                        <div class="team-sub">ELIMINATED</div>
-                    </div>
-                </div>
-
-                <div class="stat">
-                    <strong>0</strong>
-                    W
-                </div>
-
-                <div class="stat">
-                    <strong>0</strong>
-                    PTS
-                </div>
-            </div>
-
-        </div>
     </div>
 
 
-    <!-- GROUP B -->
-    <div class="group">
-        <div class="group-title">
-            <h2>GROUP B</h2>
-            <span>5 TEAMS</span>
-        </div>
+    <div class="team-list">
 
-        <div class="team-list">
 
-            <div class="team qualified">
-                <div class="rank">01</div>
+        <!-- TEAM A1 -->
 
-                <div class="team-info">
-                    <div class="logo">B1</div>
-                    <div>
-                        <div class="team-name">Team Phoenix</div>
-                        <div class="team-sub">QUALIFIED</div>
-                    </div>
-                </div>
+        <div class="team qualified">
 
-                <div class="stat">
-                    <strong>4</strong>
-                    W
-                </div>
-
-                <div class="stat">
-                    <strong>12</strong>
-                    PTS
-                </div>
+            <div class="rank">
+                01
             </div>
 
-            <div class="team qualified">
-                <div class="rank">02</div>
+            <div class="team-info">
 
-                <div class="team-info">
-                    <div class="logo">B2</div>
-                    <div>
-                        <div class="team-name">Team Vortex</div>
-                        <div class="team-sub">QUALIFIED</div>
+                <div class="logo">
+                    A1
+                </div>
+
+                <div>
+
+                    <div class="team-name">
+                        Team Alpha
                     </div>
+
+                    <div class="team-sub">
+                        QUALIFIED
+                    </div>
+
                 </div>
 
-                <div class="stat">
-                    <strong>3</strong>
-                    W
-                </div>
-
-                <div class="stat">
-                    <strong>9</strong>
-                    PTS
-                </div>
             </div>
 
-            <div class="team">
-                <div class="rank">03</div>
-
-                <div class="team-info">
-                    <div class="logo">B3</div>
-                    <div>
-                        <div class="team-name">Team Eclipse</div>
-                        <div class="team-sub">GROUP STAGE</div>
-                    </div>
-                </div>
-
-                <div class="stat">
-                    <strong>2</strong>
-                    W
-                </div>
-
-                <div class="stat">
-                    <strong>6</strong>
-                    PTS
-                </div>
+            <div class="stat">
+                <strong>4</strong>
+                W
             </div>
 
-            <div class="team">
-                <div class="rank">04</div>
-
-                <div class="team-info">
-                    <div class="logo">B4</div>
-                    <div>
-                        <div class="team-name">Team Venom</div>
-                        <div class="team-sub">GROUP STAGE</div>
-                    </div>
-                </div>
-
-                <div class="stat">
-                    <strong>1</strong>
-                    W
-                </div>
-
-                <div class="stat">
-                    <strong>3</strong>
-                    PTS
-                </div>
-            </div>
-
-            <div class="team">
-                <div class="rank">05</div>
-
-                <div class="team-info">
-                    <div class="logo">B5</div>
-                    <div>
-                        <div class="team-name">Team Inferno</div>
-                        <div class="team-sub">ELIMINATED</div>
-                    </div>
-                </div>
-
-                <div class="stat">
-                    <strong>0</strong>
-                    W
-                </div>
-
-                <div class="stat">
-                    <strong>0</strong>
-                    PTS
-                </div>
+            <div class="stat">
+                <strong>12</strong>
+                PTS
             </div>
 
         </div>
+
+
+        <!-- TEAM A2 -->
+
+        <div class="team qualified">
+
+            <div class="rank">
+                02
+            </div>
+
+            <div class="team-info">
+
+                <div class="logo">
+                    A2
+                </div>
+
+                <div>
+
+                    <div class="team-name">
+                        Team Blaze
+                    </div>
+
+                    <div class="team-sub">
+                        QUALIFIED
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>3</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>9</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+        <!-- TEAM A3 -->
+
+        <div class="team">
+
+            <div class="rank">
+                03
+            </div>
+
+            <div class="team-info">
+
+                <div class="logo">
+                    A3
+                </div>
+
+                <div>
+
+                    <div class="team-name">
+                        Team Nova
+                    </div>
+
+                    <div class="team-sub">
+                        GROUP STAGE
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>2</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>6</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+        <!-- TEAM A4 -->
+
+        <div class="team">
+
+            <div class="rank">
+                04
+            </div>
+
+            <div class="team-info">
+
+                <div class="logo">
+                    A4
+                </div>
+
+                <div>
+
+                    <div class="team-name">
+                        Team Storm
+                    </div>
+
+                    <div class="team-sub">
+                        GROUP STAGE
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>1</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>3</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+        <!-- TEAM A5 -->
+
+        <div class="team">
+
+            <div class="rank">
+                05
+            </div>
+
+            <div class="team-info">
+
+                <div class="logo">
+                    A5
+                </div>
+
+                <div>
+
+                    <div class="team-name">
+                        Team Titan
+                    </div>
+
+                    <div class="team-sub">
+                        ELIMINATED
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>0</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>0</strong>
+                PTS
+            </div>
+
+        </div>
+
+
     </div>
+
+</div>
+
+
+
+<!-- =========================
+     GROUP B
+========================= -->
+
+<div class="group">
+
+    <div class="group-title">
+
+        <h2>
+            GROUP B
+        </h2>
+
+        <span>
+            5 TEAMS
+        </span>
+
+    </div>
+
+
+    <div class="team-list">
+
+
+        <!-- TEAM B1 -->
+
+        <div class="team qualified">
+
+            <div class="rank">
+                01
+            </div>
+
+            <div class="team-info">
+
+                <div class="logo">
+                    B1
+                </div>
+
+                <div>
+
+                    <div class="team-name">
+                        Team Phoenix
+                    </div>
+
+                    <div class="team-sub">
+                        QUALIFIED
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>4</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>12</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+        <!-- TEAM B2 -->
+
+        <div class="team qualified">
+
+            <div class="rank">
+                02
+            </div>
+
+            <div class="team-info">
+
+                <div class="logo">
+                    B2
+                </div>
+
+                <div>
+
+                    <div class="team-name">
+                        Team Vortex
+                    </div>
+
+                    <div class="team-sub">
+                        QUALIFIED
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>3</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>9</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+        <!-- TEAM B3 -->
+
+        <div class="team">
+
+            <div class="rank">
+                03
+            </div>
+
+            <div class="team-info">
+
+                <div class="logo">
+                    B3
+                </div>
+
+                <div>
+
+                    <div class="team-name">
+                        Team Eclipse
+                    </div>
+
+                    <div class="team-sub">
+                        GROUP STAGE
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>2</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>6</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+        <!-- TEAM B4 -->
+
+        <div class="team">
+
+            <div class="rank">
+                04
+            </div>
+
+            <div class="team-info">
+
+                <div class="logo">
+                    B4
+                </div>
+
+                <div>
+
+                    <div class="team-name">
+                        Team Venom
+                    </div>
+
+                    <div class="team-sub">
+                        GROUP STAGE
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>1</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>3</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+        <!-- TEAM B5 -->
+
+        <div class="team">
+
+            <div class="rank">
+                05
+            </div>
+
+            <div class="team-info">
+
+                <div class="logo">
+                    B5
+                </div>
+
+                <div>
+
+                    <div class="team-name">
+                        Team Inferno
+                    </div>
+
+                    <div class="team-sub">
+                        ELIMINATED
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>0</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>0</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</div>
 
 </section>
 
+
+
+<!-- =========================
+     PLAYOFF BUTTON
+========================= -->
+
+<div class="section-toggle">
+
+    <button
+        class="toggle-btn"
+        onclick="toggleSection('playoffStage','playoffArrow')"
+    >
+
+        <span class="icon">⚔️</span>
+
+        <span>
+            PLAYOFF BRACKET
+        </span>
+
+        <span
+            class="arrow"
+            id="playoffArrow"
+        >
+            ▼
+        </span>
+
+    </button>
+
+</div>
+
+
+
+<!-- =========================
+     PLAYOFF CONTENT
+========================= -->
+
+<section
+    id="playoffStage"
+    class="collapsible"
+>
+
+
+<div class="playoff-content">
+
+
+<div class="playoff-title">
+
+    <h2>
+        PLAYOFF BRACKET
+    </h2>
+
+    <p>
+        Top 2 teams from each group advance
+    </p>
+
+</div>
+
+
+
+<div class="bracket">
+
+
+<!-- =========================
+     SEMIFINAL
+========================= -->
+
+<div class="round">
+
+    <div class="round-title">
+        SEMIFINAL
+    </div>
+
+
+    <!-- SEMIFINAL 1 -->
+
+    <div class="match">
+
+        <div class="match-title">
+            MATCH 01
+        </div>
+
+        <div class="player">
+
+            <span>
+                Group A #1
+            </span>
+
+            <span class="score">
+                —
+            </span>
+
+        </div>
+
+        <div class="player">
+
+            <span>
+                Group B #2
+            </span>
+
+            <span class="score">
+                —
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- SEMIFINAL 2 -->
+
+    <div class="match">
+
+        <div class="match-title">
+            MATCH 02
+        </div>
+
+        <div class="player">
+
+            <span>
+                Group B #1
+            </span>
+
+            <span class="score">
+                —
+            </span>
+
+        </div>
+
+        <div class="player">
+
+            <span>
+                Group A #2
+            </span>
+
+            <span class="score">
+                —
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- CONNECTOR 1 -->
+
+<div class="round">
+
+    <div class="connector"></div>
+
+    <div class="connector"></div>
+
+</div>
+
+
+
+<!-- =========================
+     GRAND FINAL
+========================= -->
+
+<div class="round">
+
+    <div class="round-title">
+        GRAND FINAL
+    </div>
+
+
+    <div class="match">
+
+        <div class="match-title">
+            GRAND FINAL
+        </div>
+
+        <div class="player">
+
+            <span>
+                Winner SF1
+            </span>
+
+            <span class="score">
+                —
+            </span>
+
+        </div>
+
+        <div class="player">
+
+            <span>
+                Winner SF2
+            </span>
+
+            <span class="score">
+                —
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- CONNECTOR 2 -->
+
+<div class="round">
+
+    <div class="connector"></div>
+
+</div>
+
+
+
+<!-- =========================
+     CHAMPION
+========================= -->
+
+<div class="final">
+
+    <div class="final-box">
+
+        <div class="trophy">
+            🏆
+        </div>
+
+        <h3>
+            CHAMPION
+        </h3>
+
+        <div class="champion">
+            TBD
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    SRILANKA MLBB SEASON 2
+    •
+    TOURNAMENT
+
+</footer>
+
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
-function toggleGroupStage() {
-    const groupStage = document.getElementById("groupStage");
-    const arrow = document.getElementById("groupArrow");
 
-    groupStage.classList.toggle("open");
+function toggleSection(sectionId, arrowId) {
 
-    if (groupStage.classList.contains("open")) {
+    const section =
+        document.getElementById(sectionId);
+
+    const arrow =
+        document.getElementById(arrowId);
+
+    const isOpen =
+        section.classList.toggle("open");
+
+
+    if (isOpen) {
+
         arrow.textContent = "▲";
+
     } else {
+
         arrow.textContent = "▼";
+
     }
+
 }
+
 </script>
+
+
+</body>
+</html>
