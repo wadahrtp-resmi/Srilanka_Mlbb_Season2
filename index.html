@@ -1,239 +1,524 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tournament Mobile Legends SL — Season 1</title>
+<title>Klasemen MLBB Sri Lanka Season 1</title>
+
+<title>MLBB Sri Lanka Season 1</title>
+
 <style>
-:root{
-  --bg:#030816;
-  --bg2:#061225;
-  --panel:#081a31;
-  --panel2:#0b223d;
-  --line:#21466f;
-  --cyan:#00cfff;
-  --blue:#168dff;
-  --text:#e9f5ff;
-  --muted:#9eb5cf;
+action-buttons{
+    text-align:center;
+    margin-bottom:20px;
 }
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:
- radial-gradient(circle at 50% 15%,rgba(0,117,255,.16),transparent 28%),
- linear-gradient(180deg,#020817 0%,#040a19 55%,#020712 100%);
- color:var(--text)}
-body{overflow-x:hidden}
-a{text-decoration:none;color:inherit}
 
-.header{
-  height:61px;border-bottom:1px solid #234a73;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 8px 0 9px;
-  background:linear-gradient(180deg,#071a32,#040c1c);
-  position:relative;z-index:20;
+.match-btn{
+    background: linear-gradient(135deg,#FFD700,#FACC15);
+    color:#111827;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:all .3s ease;
+    box-shadow:0 4px 10px rgba(255,215,0,.3);
 }
-.brand{display:flex;align-items:center;gap:10px}
-.brand-logo{
-  width:40px;height:40px;border-radius:50%;border:1px solid #1d8dca;
-  background:radial-gradient(circle,#0b5c96 0,#03152a 55%,#010713 100%);
-  display:grid;place-items:center;box-shadow:0 0 12px rgba(0,191,255,.35);
-  font-size:21px
-}
-.brand-text{line-height:1}
-.brand-text strong{font-size:14px;letter-spacing:.2px;text-shadow:0 0 7px #39c7ff}
-.brand-text small{display:block;font-size:9px;font-weight:700;color:#d8e9f7;margin-top:3px}
-.close{
-  width:33px;height:33px;border-radius:10px;border:1px solid #3b668e;
-  background:linear-gradient(145deg,#123454,#07172a);color:#e8f7ff;
-  font-size:26px;line-height:28px;cursor:pointer;box-shadow:inset 0 0 10px rgba(0,156,255,.12)
-}
-.close:hover{background:#113b60}
 
-.hero-wrap{padding:0 5px}
-.hero{
-  height:260px;border:1px solid #235b8d;border-radius:14px 14px 0 0;
-  overflow:hidden;position:relative;margin-top:0;
-  background:
-   radial-gradient(circle at 74% 46%,rgba(0,188,255,.25),transparent 20%),
-   radial-gradient(circle at 28% 35%,rgba(36,70,255,.3),transparent 25%),
-   linear-gradient(110deg,#071b40 0%,#031023 42%,#091d48 67%,#020817 100%);
+.match-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 15px rgba(255,215,0,.5);
 }
-.hero:before{
-  content:"";position:absolute;inset:0;opacity:.75;
-  background:
-   repeating-linear-gradient(125deg,transparent 0 22px,rgba(0,143,255,.10) 23px 25px,transparent 26px 47px),
-   linear-gradient(90deg,transparent 0 10%,rgba(0,178,255,.18) 11%,transparent 12% 87%,rgba(0,178,255,.14) 88%,transparent 89%);
+
+.match-btn:active{
+    transform:scale(.98);
 }
-.hero-art{
-  position:absolute;left:0;top:0;bottom:0;width:43%;
-  background:
-   radial-gradient(circle at 65% 35%,rgba(55,177,255,.7),transparent 8%),
-   radial-gradient(circle at 50% 62%,rgba(0,119,255,.35),transparent 30%);
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'Segoe UI',sans-serif;
+    }
+
+    body{
+        background: linear-gradient(135deg,#0f172a,#1e293b);
+        color:white;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+        padding:20px;
+    }
+
+    .container{
+        width:100%;
+        max-width:900px;
+        background:#111827;
+        border-radius:20px;
+        padding:30px;
+        box-shadow:0 0 25px rgba(255,215,0,.15);
+        border:1px solid rgba(255,215,0,.25);
+    }
+
+    .title{
+        text-align:center;
+        font-size:32px;
+        font-weight:bold;
+        color:#FFD700;
+        margin-bottom:25px;
+        text-transform:uppercase;
+        letter-spacing:2px;
+    }
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+        overflow:hidden;
+        border-radius:12px;
+    }
+
+    thead{
+        background:#FFD700;
+        color:#111827;
+    }
+
+    th, td{
+        padding:14px;
+        text-align:center;
+    }
+
+    tbody tr{
+        background:#1f2937;
+        border-bottom:1px solid #374151;
+    }
+
+    tbody tr:nth-child(even){
+        background:#273549;
+    }
+
+    tbody tr:hover{
+        background:#334155;
+        transition:.3s;
+    }
+
+    .upper{
+        color:#22c55e;
+        font-weight:bold;
+    }
+
+    .playoff{
+        color:#facc15;
+        font-weight:bold;
+    }
+
+    .eliminated{
+        color:#ef4444;
+        font-weight:bold;
+    }
+
+    .note{
+        margin-top:25px;
+        background:#1f2937;
+        padding:20px;
+        border-radius:12px;
+        line-height:1.8;
+    }
+
+    .note h3{
+        color:#FFD700;
+        margin-bottom:10px;
+    }
+
+    .note ul{
+        padding-left:20px;
+    }
+
+    .note li{
+        margin-bottom:5px;
+    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
-.hero-art:after{
-  content:"";position:absolute;width:180px;height:180px;left:75px;top:42px;
-  border-radius:50%;border:1px solid rgba(0,201,255,.4);
-  box-shadow:0 0 35px rgba(0,143,255,.35),inset 0 0 25px rgba(0,201,255,.25);
-  transform:rotate(25deg)
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+padding:20px;
+color:white;
 }
-.hero-copy{
-  position:absolute;right:4%;top:21px;width:64%;text-align:center;z-index:2
+
+.container{
+max-width:1000px;
+margin:auto;
+background:#111827;
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 25px rgba(255,215,0,.15);
+border:1px solid rgba(255,215,0,.2);
 }
-.kicker{
-  display:inline-block;padding:5px 17px;border-top:2px solid var(--cyan);
-  border-bottom:2px solid var(--cyan);color:#fff;font-size:11px;font-weight:900;
-  letter-spacing:1px;background:rgba(0,89,170,.16);clip-path:polygon(7% 0,93% 0,100% 50%,93% 100%,7% 100%,0 50%);
-}
+
 .title{
-  margin:10px 0 3px;font-weight:1000;font-style:italic;letter-spacing:-2px;
-  font-size:48px;line-height:.88;color:#f7fcff;
-  -webkit-text-stroke:1px #0d67a7;
-  text-shadow:0 3px 0 #0a3b6b,0 0 12px #43c9ff,0 0 26px rgba(0,145,255,.75)
+text-align:center;
+font-size:32px;
+font-weight:bold;
+color:#FFD700;
+margin-bottom:25px;
+text-transform:uppercase;
 }
-.title span{display:block}
-.sponsor{
-  display:inline-block;margin-top:14px;padding:5px 32px;border:2px solid #00bdf4;
-  border-radius:5px;color:#c9f7ff;font-weight:900;font-size:10px;
-  background:linear-gradient(180deg,rgba(0,154,255,.22),rgba(0,42,92,.35));
-  box-shadow:0 0 12px rgba(0,194,255,.45)
-}
-.ray{position:absolute;width:130px;height:4px;background:#11bdf8;filter:blur(.4px);opacity:.75}
-.r1{left:2%;top:62px;transform:rotate(21deg)} .r2{left:1%;top:125px;transform:rotate(-8deg)}
-.r3{right:3%;top:58px;transform:rotate(-16deg)} .r4{right:1%;bottom:35px;transform:rotate(10deg)}
 
-.sponsors{
-  margin:35px auto 39px;max-width:667px;height:110px;padding:17px 14px;
-  border:1px solid #294c77;border-radius:17px;
-  background:linear-gradient(180deg,rgba(11,30,57,.94),rgba(6,18,36,.9));
-  box-shadow:0 0 22px rgba(0,88,180,.08),inset 0 0 18px rgba(0,91,173,.08);
-  display:grid;grid-template-columns:repeat(5,1fr);gap:11px
+.slide-btn{
+width:100%;
+background:linear-gradient(135deg,#FFD700,#facc15);
+border:none;
+padding:15px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+border-radius:12px;
+margin-top:15px;
+margin-bottom:10px;
+color:#111827;
+transition:.3s;
 }
-.sponsor-card{
-  min-width:0;border:1px solid #0b8fd3;border-radius:9px;padding:6px;
-  background:linear-gradient(180deg,#102a49,#091a31);
-  display:flex;align-items:center;justify-content:center;
+
+.slide-btn:hover{
+transform:translateY(-2px);
 }
-.logo-box{
-  width:100%;height:59px;border:1px solid #2b6189;border-radius:7px;
-  display:flex;align-items:center;justify-content:center;overflow:hidden;
-  background:radial-gradient(circle,#122e4a,#050f20);
+
+.content{
+display:none;
+overflow:hidden;
+animation:fade .3s ease;
 }
-.logo-box img{max-width:92%;max-height:86%;object-fit:contain}
-.fake-logo{font-weight:900;font-size:16px;letter-spacing:-1px;text-align:center}
-.nine{color:#e7d16b}.aliansi{color:#b7f13a}.indo{color:#55c7ff}
-.paw{font-size:28px}.gold{font-size:25px}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+overflow:hidden;
+border-radius:12px;
+}
+
+thead{
+background:#FFD700;
+color:#111827;
+}
+
+th,td{
+padding:14px;
+text-align:center;
+}
+
+tbody tr{
+background:#1f2937;
+border-bottom:1px solid #374151;
+}
+
+tbody tr:nth-child(even){
+background:#273549;
+}
+
+.upper{
+background:rgba(34,197,94,.15)!important;
+font-weight:bold;
+}
+
+.playoff{
+background:rgba(250,204,21,.12)!important;
+font-weight:bold;
+}
+
+.eliminated{
+background:rgba(239,68,68,.12)!important;
+font-weight:bold;
+}
+
+.match-card{
+background:#1f2937;
+padding:15px;
+border-radius:12px;
+margin-bottom:10px;
+border-left:4px solid #FFD700;
+}
+
+.match-card h4{
+color:#FFD700;
+margin-bottom:5px;
+}
+
+.note{
+margin-top:25px;
+background:#1f2937;
+padding:20px;
+border-radius:12px;
+line-height:1.9;
+}
+
+.note h3{
+color:#FFD700;
+margin-bottom:10px;
+}
+
+.note ul{
+padding-left:20px;
+}
 
 .footer{
-  border-top:1px solid #22476d;min-height:180px;text-align:center;padding-top:17px;
-  background:linear-gradient(180deg,#061326 0,#020714 45%)
-}
-.footer-pill{
-  display:inline-block;padding:6px 13px;border:1px solid #1670a9;border-radius:20px;
-  color:#00cfff;font-size:9px;font-weight:900;letter-spacing:.4px;
-  box-shadow:0 0 14px rgba(0,180,255,.18)
+margin-top:20px;
+text-align:center;
+color:#9ca3af;
+font-size:14px;
 }
 
-.menu{
-  position:absolute;right:12px;top:55px;width:181px;padding:8px 6px 9px;
-  background:linear-gradient(180deg,#0b2747,#061a31);
-  border:1px solid #31648c;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.55);
-  z-index:30;display:none
-}
-.menu.open{display:block}
-.menu a{
-  display:block;padding:11px 10px;border-radius:8px;font-size:10px;font-weight:900;
-  color:#cbdced;letter-spacing:.2px
-}
-.menu a:hover,.menu a.active{background:linear-gradient(90deg,#163e62,#0b2a48);color:#fff}
-.menu a.active{border:1px solid #00bdf4;box-shadow:0 0 8px rgba(0,191,255,.25)}
-
-@media(max-width:700px){
- .header{height:57px}.brand-text strong{font-size:12px}
- .hero{height:235px}.hero-copy{width:72%;right:1%}.title{font-size:35px}
- .hero-art{width:36%}.sponsors{margin:24px 12px 30px;height:auto;grid-template-columns:repeat(2,1fr)}
- .sponsor-card:last-child{grid-column:1/-1}
- .menu{right:7px}
-}
-@media(max-width:430px){
- .hero{height:210px}.title{font-size:28px}.kicker{font-size:8px}
- .sponsor{font-size:8px;padding:4px 18px}.hero-art{opacity:.55}
- .menu{width:190px}.sponsors{grid-template-columns:1fr 1fr}
-}
 </style>
 </head>
+
 <body>
 
-<header class="header">
-  <div class="brand">
-    <div class="brand-logo">⚔</div>
-    <div class="brand-text">
-      <strong>TOURNAMENT MOBILE LEGENDS SL</strong>
-      <small>SEASON 1</small>
+<div class="container">
+
+    <div class="title">
+	<div class="action-buttons">
+    <button class="match-btn" onclick="showResults()">
+        📋 Hasil Pertandingan
+    </button>
+<div class="title">
+🏆 MLBB Sri Lanka Season 1
+</div>
+
+<button class="slide-btn" onclick="toggleBox('standings')">
+📊 Klasemen
+</button>
+
+<div id="standings" class="content">
+
+<table>
+
+<thead>
+<tr>
+<th>#</th>
+<th>Tim</th>
+<th>Main</th>
+<th>Menang</th>
+<th>Kalah</th>
+<th>Poin</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr class="upper">
+<td>1</td>
+<td>Team A</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="upper">
+<td>2</td>
+<td>Team B</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="playoff">
+<td>3</td>
+<td>Team C</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="playoff">
+<td>4</td>
+<td>Team D</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="eliminated">
+<td>5</td>
+<td>Team E</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="eliminated">
+<td>6</td>
+<td>Team F</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<button class="slide-btn" onclick="toggleBox('results')">
+🎮 Hasil Pertandingan
+</button>
+
+<div id="results" class="content">
+
+<div class="match-card">
+<h4>Match 1</h4>
+Team A 2 - 0 Team B
+</div>
+
+<div class="match-card">
+<h4>Match 2</h4>
+Team C 2 - 1 Team D
+</div>
+
+        🏆 Klasemen MLBB Sri Lanka Season 1
     </div>
-  </div>
-  <button class="close" id="closeBtn" aria-label="Tutup">×</button>
-  <nav class="menu" id="menu">
-    <a href="#" class="active">BERANDA</a>
-    <a href="#tim">TIM</a>
-    <a href="#jadwal">JADWAL</a>
-    <a href="#klasemen">KLASEMEN</a>
-    <a href="#skor">SKOR</a>
-    <a href="#mvp">MVP</a>
-    <a href="#savage">SAVAGE</a>
-    <a href="#playoff">PLAYOFF</a>
-    <a href="#rules">RULES TURNAMEN</a>
-    <a href="#prizepool">PRIZEPOOL</a>
-  </nav>
-</header>
 
-<main>
-  <section class="hero-wrap">
-    <div class="hero">
-      <div class="hero-art"></div>
-      <div class="ray r1"></div><div class="ray r2"></div><div class="ray r3"></div><div class="ray r4"></div>
-      <div class="hero-copy">
-        <div class="kicker">《 LET'S PLAY FAIR &amp; FUN 》</div>
-        <div class="title"><span>TOURNAMENT</span><span>MOBILE</span><span>LEGENDS SL</span></div>
-        <div class="sponsor">SPONSORED BY</div>
-      </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Peringkat</th>
+                <th>Tim</th>
+                <th>Main</th>
+                <th>Menang</th>
+                <th>Kalah</th>
+                <th>Poin</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="upper">
+                <td>1</td>
+                <td>Team A</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr class="upper">
+                <td>2</td>
+                <td>Team B</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr class="playoff">
+                <td>3</td>
+                <td>Team C</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr class="playoff">
+                <td>4</td>
+                <td>Team D</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr class="eliminated">
+                <td>5</td>
+                <td>Team E</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr class="eliminated">
+                <td>6</td>
+                <td>Team F</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="note">
+        <h3>📌 NOTED :</h3>
+        <ul>
+            <li>🥇 Peringkat 1 & 2 = Upper Bracket Playoff</li>
+            <li>🥈 Peringkat 3 & 4 = Playoff</li>
+            <li>❌ Peringkat 5 & 6 = Gugur</li>
+            <br>
+            <li>✅ Menang (2 - 0) = 3 Poin</li>
+            <li>✅ Menang (2 - 1) = 2 Poin</li>
+            <li>🟡 Kalah (1 - 2) = 1 Poin</li>
+            <li>❌ Kalah (0 - 2) = 0 Poin</li>
+        </ul>
     </div>
-  </section>
+<div class="match-card">
+<h4>Match 3</h4>
+Team E 0 - 2 Team F
+</div>
 
-  <section class="sponsors" aria-label="Sponsor">
-    <div class="sponsor-card"><div class="logo-box"><div class="fake-logo nine">NINE<br><small>ESPORT</small></div></div></div>
-    <div class="sponsor-card"><div class="logo-box"><div class="fake-logo aliansi">△ Aliansi TopUp</div></div></div>
-    <div class="sponsor-card"><div class="logo-box"><div class="fake-logo indo">▣ INDO CORNER</div></div></div>
-    <div class="sponsor-card"><div class="logo-box"><div class="paw">🐾</div></div></div>
-    <div class="sponsor-card"><div class="logo-box"><div class="gold">⚔️</div></div></div>
-  </section>
-</main>
+</div>
 
-<footer class="footer">
-  <div class="footer-pill">TOURNAMENT MOBILE LEGENDS SL — SEASON 1</div>
-</footer>
+<div class="note">
+
+<h3>📌 NOTED :</h3>
+
+<ul>
+<li>🥇 Peringkat 1 & 2 = Upper Bracket Playoff</li>
+<li>🥈 Peringkat 3 & 4 = Playoff</li>
+<li>❌ Peringkat 5 & 6 = Gugur</li>
+<br>
+<li>✅ Menang (2 - 0) = 3 Poin</li>
+<li>✅ Menang (2 - 1) = 2 Poin</li>
+<li>🟡 Kalah (1 - 2) = 1 Poin</li>
+<li>❌ Kalah (0 - 2) = 0 Poin</li>
+</ul>
+
+</div>
+
+<div class="footer">
+© MLBB Sri Lanka Season 1
+</div>
+
+</div>
 
 <script>
-const menu = document.getElementById('menu');
-const closeBtn = document.getElementById('closeBtn');
 
-closeBtn.addEventListener('click', () => {
-  menu.classList.toggle('open');
-  closeBtn.textContent = menu.classList.contains('open') ? '×' : '☰';
-});
+function toggleBox(id){
 
-document.addEventListener('click', e => {
-  if (!menu.contains(e.target) && !closeBtn.contains(e.target)) {
-    menu.classList.remove('open');
-    closeBtn.textContent = '☰';
-  }
-});
+let box=document.getElementById(id);
 
-document.querySelectorAll('.menu a').forEach(a => {
-  a.addEventListener('click', () => {
-    document.querySelectorAll('.menu a').forEach(x => x.classList.remove('active'));
-    a.classList.add('active');
-  });
-});
+if(box.style.display==="block"){
+box.style.display="none";
+}else{
+box.style.display="block";
+}
+
+}
+
 </script>
+
 </body>
 </html>
