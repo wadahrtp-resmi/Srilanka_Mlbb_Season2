@@ -1,335 +1,373 @@
+
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bagan Turnamen ML - 2 Grup</title>
+<meta charset="utf-8"/>
+<title>
+    TOURNAMENT MOBILE LEGENDS SL — SEASON 1
+  </title>
+<meta content="Beranda Tournament Mobile Legends SL Season 1." name="description"/>
+<link href="style.css?v=11" rel="stylesheet"/>
+<style id="logo-fix">
+.logo {
+  width: 58px !important;
+  height: 58px !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+  overflow: hidden !important;
+  border: 1px solid #29466f !important;
+  border-radius: 15px !important;
+  background: #071022 !important;
+  box-shadow: 0 0 18px rgba(53, 185, 255, 0.28) !important;
+  text-decoration: none !important;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+.logo img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center 45% !important;
+  transform: scale(1.45) !important;
+  transform-origin: center !important;
+  border-radius: 0 !important;
+}
+</style>
+<style id="global-layout-fix">
+:root {
+  --global-max-width: 1200px;
+  --global-border: #28466f;
+  --global-background: #050b1a;
+  --global-muted: #aebbd5;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-    }
+html {
+  width: 100%;
+  min-width: 320px;
+  -webkit-text-size-adjust: 100%;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 30px 20px;
-    }
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 !important;
+  overflow-x: hidden;
+  font-size: 16px;
+}
 
-    h1 {
-      text-align: center;
-      margin-bottom: 35px;
-      color: #38bdf8;
-    }
+/* HEADER SEMUA HALAMAN */
+.header,
+.site-header {
+  width: 100% !important;
+  min-height: 88px !important;
+  height: auto !important;
+  padding: 0 !important;
+}
 
-    .groups {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
+.header-container,
+.header > .container,
+.site-header > .container,
+.site-header .header-container {
+  width: min(var(--global-max-width), calc(100% - 32px)) !important;
+  min-height: 88px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
 
-    .group {
-      background: #1e293b;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
+/* LOGO SEMUA HALAMAN */
+.logo,
+.brand-logo,
+.brand-mark {
+  width: 58px !important;
+  height: 58px !important;
+  min-width: 58px !important;
+  min-height: 58px !important;
+  padding: 0 !important;
+  display: block !important;
+  overflow: hidden !important;
+  border: 1px solid var(--global-border) !important;
+  border-radius: 15px !important;
+  background: #071022 !important;
+  box-shadow: 0 0 18px rgba(53, 185, 255, 0.25) !important;
+  text-decoration: none !important;
+}
 
-    .group h2 {
-      text-align: center;
-      margin-top: 0;
-      color: #facc15;
-    }
+.logo img,
+.brand-logo img,
+.brand-mark img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center 45% !important;
+  transform: scale(1.45) !important;
+  transform-origin: center !important;
+  border-radius: 0 !important;
+}
 
-    .team {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #334155;
-      padding: 14px;
-      margin: 10px 0;
-      border-radius: 10px;
-    }
+/* NAMA TURNAMEN */
+.brand {
+  min-width: 0 !important;
+}
 
-    .team span:last-child {
-      color: #94a3b8;
-      font-size: 14px;
-    }
+.brand-title {
+  margin: 0 !important;
+  font-size: 14px !important;
+  line-height: 1.25 !important;
+  font-weight: 900 !important;
+}
 
-    .standings {
-      margin-top: 15px;
-      width: 100%;
-      border-collapse: collapse;
-    }
+.brand-subtitle {
+  margin-top: 6px !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  color: var(--global-muted) !important;
+}
 
-    .standings th,
-    .standings td {
-      padding: 10px;
-      text-align: center;
-      border-bottom: 1px solid #475569;
-    }
+/* TOMBOL MENU */
+.menu-button {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  min-height: 48px !important;
+  margin-left: auto !important;
+  padding: 0 !important;
+  border-radius: 15px !important;
+}
 
-    .standings th {
-      color: #38bdf8;
-    }
+/* HERO / JUDUL HALAMAN */
+.hero {
+  width: 100% !important;
+  min-height: 260px !important;
+  padding: 48px 20px 40px !important;
+}
 
-    .playoff {
-      margin-top: 40px;
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 15px;
-    }
+.hero h1 {
+  margin-top: 18px !important;
+  font-size: clamp(32px, 5vw, 48px) !important;
+  line-height: 1.1 !important;
+}
 
-    .playoff h2 {
-      text-align: center;
-      color: #f472b6;
-    }
+.hero p {
+  max-width: 720px !important;
+  margin: 14px auto 0 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
 
-    .bracket {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+/* HERO BERUPA BANNER DI BERANDA */
+.hero:has(.hero-banner-wrap) {
+  min-height: 0 !important;
+  padding: 14px 0 24px !important;
+}
 
-    .round {
-      width: 220px;
-    }
+.hero-banner-wrap {
+  width: min(var(--global-max-width), calc(100% - 24px)) !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  border: 1px solid var(--global-border) !important;
+  border-radius: 18px !important;
+}
 
-    .round h3 {
-      text-align: center;
-      color: #cbd5e1;
-    }
+.hero-banner {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: cover !important;
+}
 
-    .match {
-      background: #334155;
-      padding: 15px;
-      margin: 20px 0;
-      border-radius: 10px;
-      border-left: 4px solid #38bdf8;
-    }
+/* LEBAR ISI HALAMAN */
+.content,
+main.content {
+  width: min(var(--global-max-width), calc(100% - 28px)) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-top: 40px !important;
+  padding-bottom: 60px !important;
+}
 
-    .match div {
-      padding: 6px 0;
-    }
+/* PLAYOFF TETAP BISA DIGESER */
+.bracket-wrapper {
+  max-width: 1500px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 
-    .final {
-      border-left-color: #facc15;
-    }
+/* FOOTER */
+.footer {
+  width: 100% !important;
+  min-height: 76px !important;
+  padding: 25px 15px !important;
+}
 
-    @media (max-width: 700px) {
-      .groups {
-        grid-template-columns: 1fr;
-      }
+/* TAMPILAN HP */
+@media (max-width: 760px) {
+  .header-container,
+  .header > .container,
+  .site-header > .container,
+  .site-header .header-container {
+    width: calc(100% - 20px) !important;
+    min-height: 78px !important;
+    gap: 11px !important;
+  }
 
-      .bracket {
-        flex-direction: column;
-      }
+  .header,
+  .site-header {
+    min-height: 78px !important;
+  }
 
-      .round {
-        width: 100%;
-      }
-    }
-  </style>
+  .logo,
+  .brand-logo,
+  .brand-mark {
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    min-height: 52px !important;
+  }
+
+  .brand-title {
+    font-size: 12px !important;
+  }
+
+  .brand-subtitle {
+    font-size: 11px !important;
+  }
+
+  .menu-button {
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+  }
+
+  .hero {
+    min-height: 235px !important;
+    padding: 42px 15px 34px !important;
+  }
+
+  .hero:has(.hero-banner-wrap) {
+    min-height: 0 !important;
+    padding: 10px 0 18px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(29px, 9vw, 39px) !important;
+  }
+
+  .hero p {
+    font-size: 14px !important;
+  }
+
+  .content,
+  main.content {
+    width: calc(100% - 16px) !important;
+    padding-top: 30px !important;
+  }
+
+  .hero-banner-wrap {
+    width: calc(100% - 14px) !important;
+    border-radius: 13px !important;
+  }
+}
+</style>
+<link href="header-universal.css" rel="stylesheet"/>
+<link href="footer-universal.css?v=1" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#061326" name="theme-color"/>
+<link href="logo-sl.webp" rel="icon" type="image/webp"/>
+<link href="logo-sl.webp" rel="shortcut icon" type="image/webp"/>
+<link href="logo-sl.webp" rel="apple-touch-icon"/>
+<link href="mobile-universal.css?v=1" rel="stylesheet"/>
+<link href="header-responsive-fix.css?v=1" rel="stylesheet"/>
+<link href="hamburger-always.css?v=2" rel="stylesheet"/>
+<link href="sponsor-popup.css?v=1785885209" rel="stylesheet"/>
+<link href="sponsor-popup-compact.css?v=1785885209" rel="stylesheet"/>
+<link href="sponsor-drag-safe.css?v=1785885315" rel="stylesheet"/>
+<link href="sponsor-logo-fix.css?v=1785885571" rel="stylesheet"/>
 </head>
-
 <body>
-
-  <div class="container">
-
-    <h1>🏆 TURNAMEN MOBILE LEGENDS</h1>
-
-    <!-- GRUP -->
-    <div class="groups">
-
-      <!-- GROUP A -->
-      <div class="group">
-        <h2>GROUP A</h2>
-
-        <div class="team">
-          <span>🔥 Team Alpha</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>⚡ Team Bravo</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>💀 Team Charlie</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>👑 Team Delta</span>
-          <span>0 Poin</span>
-        </div>
-
-        <table class="standings">
-          <tr>
-            <th>#</th>
-            <th>Tim</th>
-            <th>M</th>
-            <th>W</th>
-            <th>L</th>
-            <th>P</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Alpha</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Bravo</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Charlie</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Delta</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-        </table>
+<!-- HEADER -->
+<header class="header sl-site-header">
+<div class="header-container sl-site-header-inner">
+<a class="logo sl-site-logo" href="index.html" title="Kembali ke Beranda">
+<img alt="Logo SL" src="logo-sl.webp"/>
+</a>
+<div class="brand sl-site-brand">
+<div class="brand-title sl-site-title">
+        TOURNAMENT MOBILE LEGENDS SL
       </div>
-
-      <!-- GROUP B -->
-      <div class="group">
-        <h2>GROUP B</h2>
-
-        <div class="team">
-          <span>🔴 Team Echo</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>🔵 Team Foxtrot</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>🟢 Team Gamma</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>🟣 Team Omega</span>
-          <span>0 Poin</span>
-        </div>
-
-        <table class="standings">
-          <tr>
-            <th>#</th>
-            <th>Tim</th>
-            <th>M</th>
-            <th>W</th>
-            <th>L</th>
-            <th>P</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Echo</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Foxtrot</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Gamma</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Omega</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-        </table>
+<div class="brand-subtitle sl-site-subtitle">
+        Season 1
       </div>
+</div>
+<button aria-label="Buka menu" class="menu-button sl-menu-button" id="menuButton" type="button">
+      ☰
+    </button>
+<nav class="navigation sl-site-nav" id="navigation">
+<a class="active" href="index.html">BERANDA</a> <a href="tim.html">TIM</a> <a href="jadwal.html">JADWAL</a> <a href="klasemen.html">KLASEMEN</a> <a href="skor.html">SKOR</a> <a href="mvp.html">MVP</a> <a href="savage.html">SAVAGE</a> <a href="playoff.html">PLAYOFF</a> <a href="rules.html">RULES TURNAMEN</a>        <a href="prizepool.html">PRIZEPOOL</a>
+</nav>
+</div>
+</header>
+<!-- ISI BERANDA -->
+<main>
+<section class="hero">
+<div class="hero-banner-wrap">
+<img alt="Banner Tournament Mobile Legends SL" class="hero-banner" src="banner-turnamen.webp"/>
+</div>
+</section>
+<!-- SPONSOR BERJALAN -->
+<div class="sponsor-box">
+<div class="sponsor-marquee">
+<div class="sponsor-track"></div>
+</div>
+</div>
 
-    </div>
 
-    <!-- PLAYOFF -->
-    <div class="playoff">
-      <h2>🔥 PLAYOFF / KNOCKOUT</h2>
+</main>
+<!-- FOOTER -->
+<footer class="sl-global-footer">
+<div class="sl-global-footer-inner">
+<span>TOURNAMENT MOBILE LEGENDS SL</span>
+<span class="sl-footer-separator">—</span>
+<span>SEASON 1</span>
+</div>
+</footer>
+<!-- TOMBOL MENU HP -->
+<script>
 
-      <div class="bracket">
+    const menuBtn =
+      document.getElementById("menuBtn");
 
-        <div class="round">
-          <h3>SEMIFINAL</h3>
+    const navMenu =
+      document.getElementById("navMenu");
 
-          <div class="match">
-            <div>🥇 Juara Grup A</div>
-            <div>🥈 Runner-up Grup B</div>
-          </div>
 
-          <div class="match">
-            <div>🥇 Juara Grup B</div>
-            <div>🥈 Runner-up Grup A</div>
-          </div>
-        </div>
+    if (menuBtn && navMenu) {
 
-        <div class="round">
-          <h3>FINAL</h3>
+      menuBtn.addEventListener(
+        "click",
+        function () {
 
-          <div class="match final">
-            <div>🏆 Pemenang SF 1</div>
-            <div>🏆 Pemenang SF 2</div>
-          </div>
-        </div>
+          const isOpen =
+            navMenu.classList.toggle("open");
 
-        <div class="round">
-          <h3>JUARA</h3>
+          menuBtn.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
 
-          <div class="match final">
-            <div>👑 CHAMPION</div>
-            <div>________________</div>
-          </div>
-        </div>
+        }
+      );
 
-      </div>
-    </div>
+    }
 
-  </div>
-
+  </script>
+<script src="hamburger-always.js?v=2"></script>
+<script src="sponsor-popup.js?v=1786753647947"></script>
+<script src="sponsor-drag-safe.js?v=1785885896"></script>
 </body>
 </html>
