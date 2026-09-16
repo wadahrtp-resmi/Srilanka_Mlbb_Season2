@@ -3,280 +3,369 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Klasemen MLBB Sri Lanka Season 2</title>
 
-<title>MLBB Sri Lanka Season 2</title>
+<title>MLBB Sri Lanka Season 1</title>
 
 <style>
-action-buttons{
-    text-align:center;
-    margin-bottom:20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.match-btn{
-    background: linear-gradient(135deg,#FFD700,#FACC15);
-    color:#111827;
-    border:none;
-    padding:12px 25px;
-    border-radius:10px;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:all .3s ease;
-    box-shadow:0 4px 10px rgba(255,215,0,.3);
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #172554 0%, transparent 45%),
+        linear-gradient(135deg, #020617, #0f172a 55%, #111827);
+    color: white;
+    padding: 20px;
 }
 
-.match-btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 6px 15px rgba(255,215,0,.5);
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 28px;
+    background: rgba(2, 6, 23, 0.94);
+    border: 1px solid rgba(250, 204, 21, 0.45);
+    border-radius: 18px;
+    box-shadow:
+        0 0 30px rgba(250, 204, 21, 0.10),
+        inset 0 0 30px rgba(15, 23, 42, 0.8);
 }
 
-.match-btn:active{
-    transform:scale(.98);
+/* =========================
+   HEADER
+========================= */
+
+.top-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
 }
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family:'Segoe UI',sans-serif;
+
+.match-btn {
+    border: none;
+    background: linear-gradient(135deg, #ffd700, #facc15);
+    color: #111827;
+    font-weight: 800;
+    padding: 11px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(250, 204, 21, 0.25);
+    transition: 0.25s;
+}
+
+.match-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(250, 204, 21, 0.4);
+}
+
+.title {
+    text-align: center;
+    color: #ffd700;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+}
+
+/* =========================
+   SECTION BUTTON
+========================= */
+
+.slide-btn {
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+    padding: 13px;
+    margin-bottom: 12px;
+
+    background: linear-gradient(135deg, #ffd700, #facc15);
+    color: #111827;
+
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.slide-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(250, 204, 21, 0.3);
+}
+
+/* =========================
+   COLLAPSIBLE CONTENT
+========================= */
+
+.content {
+    display: none;
+    margin-bottom: 15px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
     }
 
-    body{
-        background: linear-gradient(135deg,#0f172a,#1e293b);
-        color:white;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        min-height:100vh;
-        padding:20px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    overflow: hidden;
+}
+
+/* COLUMN WIDTH */
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 11%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 27%;
+}
+
+th:nth-child(3),
+td:nth-child(3),
+th:nth-child(4),
+td:nth-child(4),
+th:nth-child(5),
+td:nth-child(5),
+th:nth-child(6),
+td:nth-child(6) {
+    width: 15.5%;
+}
+
+/* HEADER */
+
+thead {
+    background: linear-gradient(135deg, #ffd700, #facc15);
+    color: #111827;
+}
+
+th {
+    padding: 13px 8px;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* BODY */
+
+td {
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+tbody tr {
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    filter: brightness(1.15);
+}
+
+/* TEAM COLUMN */
+
+td.team {
+    text-align: left;
+    padding-left: 20px;
+    white-space: nowrap;
+}
+
+/* =========================
+   RANK COLORS
+========================= */
+
+.upper {
+    background: rgba(16, 185, 129, 0.20);
+    color: #22c55e;
+}
+
+.playoff {
+    background: rgba(234, 179, 8, 0.15);
+    color: #facc15;
+}
+
+.eliminated {
+    background: rgba(239, 68, 68, 0.13);
+    color: #ef4444;
+}
+
+/* =========================
+   MATCH CARDS
+========================= */
+
+.match-card {
+    background: #1e293b;
+    border-left: 4px solid #ffd700;
+    border-radius: 9px;
+    padding: 15px 18px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.match-card h4 {
+    color: #ffd700;
+    margin-bottom: 5px;
+}
+
+/* =========================
+   NOTED
+========================= */
+
+.note {
+    margin-top: 25px;
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 22px;
+    border: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.note-title {
+    color: #ffd700;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+.note-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.note-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.note-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.note-icon {
+    width: 28px;
+    min-width: 28px;
+    text-align: center;
+    font-size: 19px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    margin-top: 22px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 8px;
     }
 
-    .container{
-        width:100%;
-        max-width:900px;
-        background:#111827;
-        border-radius:20px;
-        padding:30px;
-        box-shadow:0 0 25px rgba(255,215,0,.15);
-        border:1px solid rgba(255,215,0,.25);
+    .container {
+        padding: 14px;
+        border-radius: 12px;
     }
 
-    .title{
-        text-align:center;
-        font-size:32px;
-        font-weight:bold;
-        color:#FFD700;
-        margin-bottom:25px;
-        text-transform:uppercase;
-        letter-spacing:2px;
+    .title {
+        font-size: 21px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
     }
 
-    table{
-        width:100%;
-        border-collapse:collapse;
-        overflow:hidden;
-        border-radius:12px;
+    .match-btn {
+        font-size: 12px;
+        padding: 9px 18px;
     }
 
-    thead{
-        background:#FFD700;
-        color:#111827;
+    .slide-btn {
+        font-size: 13px;
+        padding: 12px;
     }
 
-    th, td{
-        padding:14px;
-        text-align:center;
+    table {
+        min-width: 600px;
     }
 
-    tbody tr{
-        background:#1f2937;
-        border-bottom:1px solid #374151;
+    th {
+        font-size: 13px;
+        padding: 11px 5px;
     }
 
-    tbody tr:nth-child(even){
-        background:#273549;
+    td {
+        font-size: 14px;
+        padding: 11px 5px;
     }
 
-    tbody tr:hover{
-        background:#334155;
-        transition:.3s;
+    td.team {
+        text-align: center;
+        padding-left: 5px;
     }
 
-    .upper{
-        color:#22c55e;
-        font-weight:bold;
+    .note {
+        padding: 16px;
     }
 
-    .playoff{
-        color:#facc15;
-        font-weight:bold;
+    .note-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 
-    .eliminated{
-        color:#ef4444;
-        font-weight:bold;
+    .note-item {
+        font-size: 13px;
     }
-
-    .note{
-        margin-top:25px;
-        background:#1f2937;
-        padding:20px;
-        border-radius:12px;
-        line-height:1.8;
-    }
-
-    .note h3{
-        color:#FFD700;
-        margin-bottom:10px;
-    }
-
-    .note ul{
-        padding-left:20px;
-    }
-
-    .note li{
-        margin-bottom:5px;
-    }
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
 }
-
-body{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-padding:20px;
-color:white;
-}
-
-.container{
-max-width:1000px;
-margin:auto;
-background:#111827;
-padding:25px;
-border-radius:20px;
-box-shadow:0 0 25px rgba(255,215,0,.15);
-border:1px solid rgba(255,215,0,.2);
-}
-
-.title{
-text-align:center;
-font-size:32px;
-font-weight:bold;
-color:#FFD700;
-margin-bottom:25px;
-text-transform:uppercase;
-}
-
-.slide-btn{
-width:100%;
-background:linear-gradient(135deg,#FFD700,#facc15);
-border:none;
-padding:15px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-border-radius:12px;
-margin-top:15px;
-margin-bottom:10px;
-color:#111827;
-transition:.3s;
-}
-
-.slide-btn:hover{
-transform:translateY(-2px);
-}
-
-.content{
-display:none;
-overflow:hidden;
-animation:fade .3s ease;
-}
-
-@keyframes fade{
-from{opacity:0;}
-to{opacity:1;}
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-overflow:hidden;
-border-radius:12px;
-}
-
-thead{
-background:#FFD700;
-color:#111827;
-}
-
-th,td{
-padding:14px;
-text-align:center;
-}
-
-tbody tr{
-background:#1f2937;
-border-bottom:1px solid #374151;
-}
-
-tbody tr:nth-child(even){
-background:#273549;
-}
-
-.upper{
-background:rgba(34,197,94,.15)!important;
-font-weight:bold;
-}
-
-.playoff{
-background:rgba(250,204,21,.12)!important;
-font-weight:bold;
-}
-
-.eliminated{
-background:rgba(239,68,68,.12)!important;
-font-weight:bold;
-}
-
-.match-card{
-background:#1f2937;
-padding:15px;
-border-radius:12px;
-margin-bottom:10px;
-border-left:4px solid #FFD700;
-}
-
-.match-card h4{
-color:#FFD700;
-margin-bottom:5px;
-}
-
-.note{
-margin-top:25px;
-background:#1f2937;
-padding:20px;
-border-radius:12px;
-line-height:1.9;
-}
-
-.note h3{
-color:#FFD700;
-margin-bottom:10px;
-}
-
-.note ul{
-padding-left:20px;
-}
-
-.footer{
-margin-top:20px;
-text-align:center;
-color:#9ca3af;
-font-size:14px;
-}
-
 </style>
 </head>
 
@@ -284,237 +373,224 @@ font-size:14px;
 
 <div class="container">
 
+    <!-- HEADER BUTTON -->
+    <div class="top-button">
+        <button class="match-btn" onclick="showResults()">
+            📋 Hasil Pertandingan
+        </button>
+    </div>
+
+    <!-- TITLE -->
     <div class="title">
-	<div class="action-buttons">
-    <button class="match-btn" onclick="showResults()">
-        📋 Hasil Pertandingan
+        🏆 MLBB SRI LANKA SEASON 1
+    </div>
+
+    <!-- KLASemen BUTTON -->
+    <button class="slide-btn" onclick="toggleBox('standings')">
+        📊 Klasemen
     </button>
-<div class="title">
-🏆 MLBB Sri Lanka Season 1
-</div>
 
-<button class="slide-btn" onclick="toggleBox('standings')">
-📊 Klasemen
-</button>
+    <!-- KLASemen -->
+    <div id="standings" class="content">
 
-<div id="standings" class="content">
+        <div class="table-wrapper">
 
-<table>
+            <table>
 
-<thead>
-<tr>
-<th>#</th>
-<th>Tim</th>
-<th>Main</th>
-<th>Menang</th>
-<th>Kalah</th>
-<th>Poin</th>
-</tr>
-</thead>
+                <thead>
+                    <tr>
+                        <th>Peringkat</th>
+                        <th>Tim</th>
+                        <th>Main</th>
+                        <th>Menang</th>
+                        <th>Kalah</th>
+                        <th>Poin</th>
+                    </tr>
+                </thead>
 
-<tbody>
+                <tbody>
 
-<tr class="upper">
-<td>1</td>
-<td>Team A</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
+                    <tr class="upper">
+                        <td>1</td>
+                        <td class="team">TEAM A</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
 
-<tr class="upper">
-<td>2</td>
-<td>Team B</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
+                    <tr class="upper">
+                        <td>2</td>
+                        <td class="team">TEAM B</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
 
-<tr class="playoff">
-<td>3</td>
-<td>Team C</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
+                    <tr class="playoff">
+                        <td>3</td>
+                        <td class="team">TEAM C</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
 
-<tr class="playoff">
-<td>4</td>
-<td>Team D</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
+                    <tr class="playoff">
+                        <td>4</td>
+                        <td class="team">TEAM D</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
 
-<tr class="eliminated">
-<td>5</td>
-<td>Team E</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
+                    <tr class="eliminated">
+                        <td>5</td>
+                        <td class="team">TEAM E</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
 
-<tr class="eliminated">
-<td>6</td>
-<td>Team F</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
+                    <tr class="eliminated">
+                        <td>6</td>
+                        <td class="team">TEAM F</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
 
-</tbody>
+                </tbody>
 
-</table>
-</div>
+            </table>
 
-<button class="slide-btn" onclick="toggleBox('results')">
-🎮 Hasil Pertandingan
-</button>
+        </div>
 
-<div id="results" class="content">
-
-<div class="match-card">
-<h4>Match 1</h4>
-Team A 2 - 0 Team B
-</div>
-
-<div class="match-card">
-<h4>Match 2</h4>
-Team C 2 - 1 Team D
-</div>
-
-        🏆 Klasemen MLBB Sri Lanka Season 1
     </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Peringkat</th>
-                <th>Tim</th>
-                <th>Main</th>
-                <th>Menang</th>
-                <th>Kalah</th>
-                <th>Poin</th>
-            </tr>
-        </thead>
+    <!-- HASIL PERTANDINGAN -->
+    <button class="slide-btn" onclick="toggleBox('results')">
+        🎮 Hasil Pertandingan
+    </button>
 
-        <tbody>
-            <tr class="upper">
-                <td>1</td>
-                <td>Team A</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
+    <div id="results" class="content">
 
-            <tr class="upper">
-                <td>2</td>
-                <td>Team B</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
+        <div class="match-card">
+            <h4>Match 1</h4>
+            TEAM A &nbsp; <strong>2 - 0</strong> &nbsp; TEAM B
+        </div>
 
-            <tr class="playoff">
-                <td>3</td>
-                <td>Team C</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
+        <div class="match-card">
+            <h4>Match 2</h4>
+            TEAM C &nbsp; <strong>2 - 1</strong> &nbsp; TEAM D
+        </div>
 
-            <tr class="playoff">
-                <td>4</td>
-                <td>Team D</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
+        <div class="match-card">
+            <h4>Match 3</h4>
+            TEAM E &nbsp; <strong>0 - 2</strong> &nbsp; TEAM F
+        </div>
 
-            <tr class="eliminated">
-                <td>5</td>
-                <td>Team E</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
+    </div>
 
-            <tr class="eliminated">
-                <td>6</td>
-                <td>Team F</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-        </tbody>
-    </table>
-
+    <!-- NOTED -->
     <div class="note">
-        <h3>📌 NOTED :</h3>
-        <ul>
-            <li>🥇 Peringkat 1 & 2 = Upper Bracket Playoff</li>
-            <li>🥈 Peringkat 3 & 4 = Playoff</li>
-            <li>❌ Peringkat 5 & 6 = Gugur</li>
-            <br>
-            <li>✅ Menang (2 - 0) = 3 Poin</li>
-            <li>✅ Menang (2 - 1) = 2 Poin</li>
-            <li>🟡 Kalah (1 - 2) = 1 Poin</li>
-            <li>❌ Kalah (0 - 2) = 0 Poin</li>
-        </ul>
+
+        <div class="note-title">
+            📌 NOTED :
+        </div>
+
+        <div class="note-grid">
+
+            <!-- LEFT -->
+            <div class="note-column">
+
+                <div class="note-item">
+                    <span class="note-icon">🥇</span>
+                    <span>PERINGKAT 1 & 2 = UPPER BRACKET PLAYOFF</span>
+                </div>
+
+                <div class="note-item">
+                    <span class="note-icon">🥈</span>
+                    <span>PERINGKAT 3 & 4 = PLAYOFF</span>
+                </div>
+
+                <div class="note-item">
+                    <span class="note-icon">❌</span>
+                    <span>PERINGKAT 5 & 6 = GUGUR</span>
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="note-column">
+
+                <div class="note-item">
+                    <span class="note-icon">✅</span>
+                    <span>MENANG (2 - 0) = 3 POIN</span>
+                </div>
+
+                <div class="note-item">
+                    <span class="note-icon">✅</span>
+                    <span>MENANG (2 - 1) = 2 POIN</span>
+                </div>
+
+                <div class="note-item">
+                    <span class="note-icon">🟡</span>
+                    <span>KALAH (1 - 2) = 1 POIN</span>
+                </div>
+
+                <div class="note-item">
+                    <span class="note-icon">❌</span>
+                    <span>KALAH (0 - 2) = 0 POIN</span>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-<div class="match-card">
-<h4>Match 3</h4>
-Team E 0 - 2 Team F
-</div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © MLBB Sri Lanka Season 1
+    </div>
 
 </div>
 
-<div class="note">
-
-<h3>📌 NOTED :</h3>
-
-<ul>
-<li>🥇 Peringkat 1 & 2 = Upper Bracket Playoff</li>
-<li>🥈 Peringkat 3 & 4 = Playoff</li>
-<li>❌ Peringkat 5 & 6 = Gugur</li>
-<br>
-<li>✅ Menang (2 - 0) = 3 Poin</li>
-<li>✅ Menang (2 - 1) = 2 Poin</li>
-<li>🟡 Kalah (1 - 2) = 1 Poin</li>
-<li>❌ Kalah (0 - 2) = 0 Poin</li>
-</ul>
-
-</div>
-
-<div class="footer">
-© MLBB Sri Lanka Season 1
-</div>
-
-</div>
 
 <script>
 
-function toggleBox(id){
+/* TOGGLE CONTENT */
 
-let box=document.getElementById(id);
+function toggleBox(id) {
 
-if(box.style.display==="block"){
-box.style.display="none";
-}else{
-box.style.display="block";
+    const box = document.getElementById(id);
+
+    if (box.style.display === "block") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "block";
+    }
+
 }
+
+
+/* HASIL PERTANDINGAN BUTTON */
+
+function showResults() {
+
+    const results = document.getElementById("results");
+
+    results.style.display = "block";
+
+    results.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 
 }
 
