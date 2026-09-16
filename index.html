@@ -1,3 +1,9 @@
+Today 6:11 AM
+kok bisa jelek ga rapi, bantu rapiin ya 
+Edit
+
+Bisa. Ini HTML lengkap yang sudah dirapikan mengikuti desain pada gambar: lebih lebar, kolom sejajar, nama tim tidak pecah berantakan, warna zona ranking jelas, dan bagian NOTED dibuat 2 kolom.
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -371,6 +377,16 @@ td.team {
 
 <body>
 
+<div class="container">
+
+    <!-- HEADER BUTTON -->
+    <div class="top-button">
+        <button class="match-btn" onclick="showResults()">
+            📋 Hasil Pertandingan
+        </button>
+    </div>
+
+    <!-- TITLE -->
     <div class="title">
         🏆 MLBB SRI LANKA SEASON 1
     </div>
@@ -588,3 +604,173 @@ function showResults() {
 
 </body>
 </html>
+
+Perbaikan paling penting dari tampilan sebelumnya: tabel sekarang memakai table-layout: fixed, lebar setiap kolom sudah ditentukan, nama TEAM A/B/C... tidak akan pecah menjadi dua baris, dan bagian NOTED otomatis menjadi 2 kolom di desktop tetapi berubah menjadi 1 kolom di HP.
+
+Today 6:23 AM
+Pasted text.txt
+Document
+Analysis paused
+Today 6:24 AM
+aku mau dibawah ada ssponsor yang bisa masukin logo
+
+Bisa 👍 Kita tambahkan bagian SPONSOR di paling bawah, sebelum footer, dengan beberapa slot logo. Logo bisa berupa file gambar seperti .png, .jpg, atau .webp.
+
+Di kode kamu, bagian footer sekarang ada di sekitar baris 547–550.
+
+1. Tambahkan CSS ini
+
+Masukkan sebelum bagian /* FOOTER */:
+
+/* =========================
+   SPONSOR
+========================= */
+
+.sponsor-section {
+    margin-top: 25px;
+    padding: 22px;
+    background: #0f172a;
+    border: 1px solid rgba(250, 204, 21, 0.25);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.sponsor-title {
+    color: #ffd700;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.sponsor-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.sponsor {
+    width: 150px;
+    height: 75px;
+    background: #1e293b;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    transition: 0.25s;
+}
+
+.sponsor:hover {
+    transform: translateY(-3px);
+    border-color: #ffd700;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.15);
+}
+
+.sponsor img {
+    max-width: 100%;
+    max-height: 55px;
+    object-fit: contain;
+}
+
+/* Sponsor kosong */
+.sponsor.empty {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    .sponsor {
+        width: 120px;
+        height: 65px;
+    }
+
+    .sponsor img {
+        max-height: 45px;
+    }
+
+    .sponsor-title {
+        font-size: 16px;
+    }
+}
+2. Tambahkan HTML ini sebelum Footer
+
+Letakkan tepat sebelum:
+
+<div class="footer">
+    © MLBB Sri Lanka Season 1
+</div>
+
+yang ada di kode kamu.
+
+Gunakan:
+
+<!-- =========================
+     SPONSOR
+========================= -->
+
+<div class="sponsor-section">
+
+    <div class="sponsor-title">
+        🤝 OUR SPONSORS
+    </div>
+
+    <div class="sponsor-list">
+
+        <!-- SPONSOR 1 -->
+        <div class="sponsor">
+            <img src="sponsor1.png" alt="Sponsor 1">
+        </div>
+
+        <!-- SPONSOR 2 -->
+        <div class="sponsor">
+            <img src="sponsor2.png" alt="Sponsor 2">
+        </div>
+
+        <!-- SPONSOR 3 -->
+        <div class="sponsor">
+            <img src="sponsor3.png" alt="Sponsor 3">
+        </div>
+
+        <!-- SPONSOR 4 -->
+        <div class="sponsor">
+            <img src="sponsor4.png" alt="Sponsor 4">
+        </div>
+
+    </div>
+
+</div>
+
+Jadi urutannya nanti:
+
+🏆 MLBB SRI LANKA SEASON 1
+
+        📊 Klasemen
+┌──────────────────────────┐
+│ Peringkat Tim Main ...   │
+│ 1        TEAM A     ...  │
+│ 2        TEAM B     ...  │
+│ 3        TEAM C     ...  │
+│ 4        TEAM D     ...  │
+│ 5        TEAM E     ...  │
+│ 6        TEAM F     ...  │
+└──────────────────────────┘
+
+        🎮 Hasil Pertandingan
+
+┌──────────────────────────┐
+│ 📌 NOTED                  │
+│ ...                       │
+└──────────────────────────┘
+
+        🤝 OUR SPONSORS
+
+   ┌──────┐ ┌──────┐ ┌────
