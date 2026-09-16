@@ -1,335 +1,159 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bagan Turnamen ML - 2 Grup</title>
+<div class="playoff-section">
+  <button id="togglePlayoff" class="toggle-btn" type="button">
+    🏆 Tampilkan Playoff
+  </button>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <div id="playoffContent" class="playoff-content">
+    <h2>🔥 PLAYOFF / KNOCKOUT</h2>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-    }
+    <div class="bracket">
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 30px 20px;
-    }
+      <div class="round">
+        <h3>SEMIFINAL</h3>
 
-    h1 {
-      text-align: center;
-      margin-bottom: 35px;
-      color: #38bdf8;
-    }
+        <div class="match">
+          <div>🥇 Juara Grup A</div>
+          <div>🥈 Runner-up Grup B</div>
+          <strong>VS</strong>
+        </div>
 
-    .groups {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
+        <div class="match">
+          <div>🥇 Juara Grup B</div>
+          <div>🥈 Runner-up Grup A</div>
+          <strong>VS</strong>
+        </div>
+      </div>
 
-    .group {
-      background: #1e293b;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
+      <div class="round">
+        <h3>FINAL</h3>
 
-    .group h2 {
-      text-align: center;
-      margin-top: 0;
-      color: #facc15;
-    }
+        <div class="match final">
+          <div>🏆 Pemenang SF 1</div>
+          <div>🏆 Pemenang SF 2</div>
+          <strong>VS</strong>
+        </div>
+      </div>
 
-    .team {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #334155;
-      padding: 14px;
-      margin: 10px 0;
-      border-radius: 10px;
-    }
+      <div class="round">
+        <h3>CHAMPION</h3>
 
-    .team span:last-child {
-      color: #94a3b8;
-      font-size: 14px;
-    }
+        <div class="match champion">
+          <div>👑 JUARA</div>
+          <div>________________</div>
+        </div>
+      </div>
 
-    .standings {
-      margin-top: 15px;
-      width: 100%;
-      border-collapse: collapse;
-    }
+    </div>
+  </div>
+</div>
 
-    .standings th,
-    .standings td {
-      padding: 10px;
-      text-align: center;
-      border-bottom: 1px solid #475569;
-    }
+<style>
+  .playoff-section {
+    margin-top: 40px;
+  }
 
-    .standings th {
-      color: #38bdf8;
-    }
+  .toggle-btn {
+    display: block;
+    margin: auto;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 10px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+  }
 
-    .playoff {
-      margin-top: 40px;
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 15px;
-    }
+  .toggle-btn:hover {
+    background: #7dd3fc;
+  }
 
-    .playoff h2 {
-      text-align: center;
-      color: #f472b6;
-    }
+  .playoff-content {
+    margin-top: 20px;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
 
+    /* Awalnya tertutup */
+    display: none;
+  }
+
+  .playoff-content.show {
+    display: block;
+  }
+
+  .playoff-content h2 {
+    text-align: center;
+    color: #f472b6;
+  }
+
+  .bracket {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .round {
+    width: 220px;
+  }
+
+  .round h3 {
+    text-align: center;
+    color: #cbd5e1;
+  }
+
+  .match {
+    background: #334155;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 4px solid #38bdf8;
+  }
+
+  .match div {
+    padding: 6px 0;
+  }
+
+  .match strong {
+    display: block;
+    text-align: center;
+    color: #94a3b8;
+    margin-top: 5px;
+  }
+
+  .final {
+    border-left-color: #f472b6;
+  }
+
+  .champion {
+    border-left-color: #facc15;
+  }
+
+  @media (max-width: 700px) {
     .bracket {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      flex-direction: column;
     }
 
     .round {
-      width: 220px;
+      width: 100%;
     }
+  }
+</style>
 
-    .round h3 {
-      text-align: center;
-      color: #cbd5e1;
+<script>
+  const toggleButton = document.getElementById("togglePlayoff");
+  const playoffContent = document.getElementById("playoffContent");
+
+  toggleButton.addEventListener("click", function () {
+    playoffContent.classList.toggle("show");
+
+    if (playoffContent.classList.contains("show")) {
+      toggleButton.textContent = "🔽 Sembunyikan Playoff";
+    } else {
+      toggleButton.textContent = "🏆 Tampilkan Playoff";
     }
-
-    .match {
-      background: #334155;
-      padding: 15px;
-      margin: 20px 0;
-      border-radius: 10px;
-      border-left: 4px solid #38bdf8;
-    }
-
-    .match div {
-      padding: 6px 0;
-    }
-
-    .final {
-      border-left-color: #facc15;
-    }
-
-    @media (max-width: 700px) {
-      .groups {
-        grid-template-columns: 1fr;
-      }
-
-      .bracket {
-        flex-direction: column;
-      }
-
-      .round {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-
-    <h1>🏆 TURNAMEN MOBILE LEGENDS</h1>
-
-    <!-- GRUP -->
-    <div class="groups">
-
-      <!-- GROUP A -->
-      <div class="group">
-        <h2>GROUP A</h2>
-
-        <div class="team">
-          <span>🔥 Team Alpha</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>⚡ Team Bravo</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>💀 Team Charlie</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>👑 Team Delta</span>
-          <span>0 Poin</span>
-        </div>
-
-        <table class="standings">
-          <tr>
-            <th>#</th>
-            <th>Tim</th>
-            <th>M</th>
-            <th>W</th>
-            <th>L</th>
-            <th>P</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Alpha</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Bravo</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Charlie</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Delta</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-        </table>
-      </div>
-
-      <!-- GROUP B -->
-      <div class="group">
-        <h2>GROUP B</h2>
-
-        <div class="team">
-          <span>🔴 Team Echo</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>🔵 Team Foxtrot</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>🟢 Team Gamma</span>
-          <span>0 Poin</span>
-        </div>
-
-        <div class="team">
-          <span>🟣 Team Omega</span>
-          <span>0 Poin</span>
-        </div>
-
-        <table class="standings">
-          <tr>
-            <th>#</th>
-            <th>Tim</th>
-            <th>M</th>
-            <th>W</th>
-            <th>L</th>
-            <th>P</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Echo</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Foxtrot</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Gamma</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Omega</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-        </table>
-      </div>
-
-    </div>
-
-    <!-- PLAYOFF -->
-    <div class="playoff">
-      <h2>🔥 PLAYOFF / KNOCKOUT</h2>
-
-      <div class="bracket">
-
-        <div class="round">
-          <h3>SEMIFINAL</h3>
-
-          <div class="match">
-            <div>🥇 Juara Grup A</div>
-            <div>🥈 Runner-up Grup B</div>
-          </div>
-
-          <div class="match">
-            <div>🥇 Juara Grup B</div>
-            <div>🥈 Runner-up Grup A</div>
-          </div>
-        </div>
-
-        <div class="round">
-          <h3>FINAL</h3>
-
-          <div class="match final">
-            <div>🏆 Pemenang SF 1</div>
-            <div>🏆 Pemenang SF 2</div>
-          </div>
-        </div>
-
-        <div class="round">
-          <h3>JUARA</h3>
-
-          <div class="match final">
-            <div>👑 CHAMPION</div>
-            <div>________________</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-</body>
-</html>
+  });
+</script>
