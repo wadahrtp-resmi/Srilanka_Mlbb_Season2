@@ -1,288 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bagan Turnamen ML - 2 Grup</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
- 
-</style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 35px;
+      color: #38bdf8;
+    }
+
+    .groups {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .group {
+      background: #1e293b;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .group h2 {
+      text-align: center;
+      margin-top: 0;
+      color: #facc15;
+    }
+
+    .team {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #334155;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 10px;
+    }
+
+    .team span:last-child {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .standings {
+      margin-top: 15px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .standings th,
+    .standings td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #475569;
+    }
+
+    .standings th {
+      color: #38bdf8;
+    }
+
+    .playoff {
+      margin-top: 40px;
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .playoff h2 {
+      text-align: center;
+      color: #f472b6;
+    }
+
+    .bracket {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .round {
+      width: 220px;
+    }
+
+    .round h3 {
+      text-align: center;
+      color: #cbd5e1;
+    }
+
+    .match {
+      background: #334155;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 10px;
+      border-left: 4px solid #38bdf8;
+    }
+
+    .match div {
+      padding: 6px 0;
+    }
+
+    .final {
+      border-left-color: #facc15;
+    }
+
+    @media (max-width: 700px) {
+      .groups {
+        grid-template-columns: 1fr;
+      }
+
+      .bracket {
+        flex-direction: column;
+      }
+
+      .round {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="container">
-<div class="title">
-&#127942; MLBB Sri Lanka Season 1
-</div>
-<button class="slide-btn" onclick="toggleBox('standings')">
-&#128202; Klasemen
-</button>
-<div id="standings" class="content">
-<table>
-<thead>
-<tr>
-<th>Pos</th>
-<th>Tim</th>
-<th>Main</th>
-<th>Menang</th>
-<th>Kalah</th>
-<th>Match W/L</th>
-<th>Poin</th>
-</tr>
-</thead>
-<tbody>
-<tr class="upper">
-<td>1</td>
-<td>SHAUN THE SHEEP</td>
-<td>5</td>
-<td>5</td>
-<td>0</td>
-<td>10-0</td>
-<td>15</td>
-</tr>
-<tr class="upper">
-<td>2</td>
-<td>SABER SPRINT</td>
-<td>5</td>
-<td>4</td>
-<td>1</td>
-<td>8-3</td>
-<td>11</td>
-</tr>
-<tr class="playoff">
-<td>3</td>
-<td>BINTANG1</td>
-<td>5</td>
-<td>2</td>
-<td>3</td>
-<td>5-6</td>
-<td>7</td>
-</tr>
-<tr class="playoff">
-<td>4</td>
-<td>NAGAHITAM</td>
-<td>5</td>
-<td>2</td>
-<td>3</td>
-<td>5-7</td>
-<td>6</td>
-</tr>
-<tr class="eliminated">
-<td>5</td>
-<td>BNF</td>
-<td>5</td>
-<td>1</td>
-<td>4</td>
-<td>3-8</td>
-<td>4</td>
-</tr>
-<tr class="eliminated">
-<td>6</td>
-<td>RASTA</td>
-<td>5</td>
-<td>1</td>
-<td>4</td>
-<td>2-9</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-</div>
-<button class="slide-btn" onclick="toggleBox('results')">
-&#128293; PLAYOFF
-</button>
-<div id="results" class="content">
 
-<div class="playoff-bracket">
+  <div class="container">
 
-    <!-- ROUND 1 -->
-    <div class="bracket-column">
+    <h1>🏆 TURNAMEN MOBILE LEGENDS</h1>
 
-        <div class="bracket-match">
-            <div class="bracket-title">
-                UPPER BRACKET (BO5)
-            </div>
-            <div class="bracket-team">
-                SHAUN THE  SHEEP   (2)
-            </div>
-            <div class="bracket-team">
-                SABER SPRINT       (3)
-            </div>
+    <!-- GRUP -->
+    <div class="groups">
+
+      <!-- GROUP A -->
+      <div class="group">
+        <h2>GROUP A</h2>
+
+        <div class="team">
+          <span>🔥 Team Alpha</span>
+          <span>0 Poin</span>
         </div>
 
-        <div class="bracket-match">
-            <div class="bracket-title">
-                LOWER BRACKET (BO5)
-            </div>
-            <div class="bracket-team">
-                BINTANG SATU  (2)
-            </div>
-            <div class="bracket-team">
-                NAGAHITAM     (3)
-            </div>
+        <div class="team">
+          <span>⚡ Team Bravo</span>
+          <span>0 Poin</span>
         </div>
+
+        <div class="team">
+          <span>💀 Team Charlie</span>
+          <span>0 Poin</span>
+        </div>
+
+        <div class="team">
+          <span>👑 Team Delta</span>
+          <span>0 Poin</span>
+        </div>
+
+        <table class="standings">
+          <tr>
+            <th>#</th>
+            <th>Tim</th>
+            <th>M</th>
+            <th>W</th>
+            <th>L</th>
+            <th>P</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Alpha</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bravo</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Charlie</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Delta</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- GROUP B -->
+      <div class="group">
+        <h2>GROUP B</h2>
+
+        <div class="team">
+          <span>🔴 Team Echo</span>
+          <span>0 Poin</span>
+        </div>
+
+        <div class="team">
+          <span>🔵 Team Foxtrot</span>
+          <span>0 Poin</span>
+        </div>
+
+        <div class="team">
+          <span>🟢 Team Gamma</span>
+          <span>0 Poin</span>
+        </div>
+
+        <div class="team">
+          <span>🟣 Team Omega</span>
+          <span>0 Poin</span>
+        </div>
+
+        <table class="standings">
+          <tr>
+            <th>#</th>
+            <th>Tim</th>
+            <th>M</th>
+            <th>W</th>
+            <th>L</th>
+            <th>P</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Echo</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Foxtrot</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Gamma</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Omega</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </table>
+      </div>
 
     </div>
 
-    <div class="arrow">➜</div>
+    <!-- PLAYOFF -->
+    <div class="playoff">
+      <h2>🔥 PLAYOFF / KNOCKOUT</h2>
 
-    <!-- ROUND 2 -->
-    <div class="bracket-column">
+      <div class="bracket">
 
-        <div class="bracket-match">
-            <div class="bracket-title">
-                FINAL
-            </div>
-            <div class="bracket-team">
-                SABER SPRINT 
-            </div>
+        <div class="round">
+          <h3>SEMIFINAL</h3>
+
+          <div class="match">
+            <div>🥇 Juara Grup A</div>
+            <div>🥈 Runner-up Grup B</div>
+          </div>
+
+          <div class="match">
+            <div>🥇 Juara Grup B</div>
+            <div>🥈 Runner-up Grup A</div>
+          </div>
         </div>
 
-        <div class="bracket-match">
-            <div class="bracket-title">
-                LOWER FINAL (BO5)
-            </div>
-            <div class="bracket-team">
-               SHAUN THE SHEEP   (3)
-            </div>
-            <div class="bracket-team">
-                NAGAHITAM     (0) 
-            </div>
+        <div class="round">
+          <h3>FINAL</h3>
+
+          <div class="match final">
+            <div>🏆 Pemenang SF 1</div>
+            <div>🏆 Pemenang SF 2</div>
+          </div>
         </div>
 
+        <div class="round">
+          <h3>JUARA</h3>
+
+          <div class="match final">
+            <div>👑 CHAMPION</div>
+            <div>________________</div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <div class="arrow">➜</div>
+  </div>
 
-    <!-- GRAND FINAL -->
-    <div class="bracket-column">
-
-        <div class="bracket-match bracket-final">
-            <div class="bracket-title">
-                GRAND FINAL (BO5)
-            </div>
-            <div class="bracket-team">
-                SABER SPRINT      (1)
-            </div>
-            <div class="bracket-team">
-                SHAUN THE SHEEP    (3)
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-<button class="slide-btn" onclick="toggleBox('schedule')">
-&#128197; Hasil & Jadwal Pertandingan
-</button>
- 
-<div id="schedule" class="content">
-
-<div class="match-card">
-<h4>23 Juni 2026</h4>
-
-TEAM NAGAHITAM (0) vs (2) TEAM SHAUN THE SHEEP
-</div>
- 
-<div class="match-card">
-<h4>24 Juni 2026</h4>
-
-TEAM BNF (0) vs (2) TEAM BINTANG 1  
-</div>
- 
-<div class="match-card">
-<h4>25 Juni 2026</h4>
-
-TEAM SABER SPRINT (2)  vs  (0)   TEAM RASTA 
-</div>
- 
-<div class="match-card">
-<h4>26 Juni 2026</h4>
-
-TEAM NAGAHITAM (2)  vs  (0)  TEAM BINTANG 1 
-<div class='center' id='header-wrapper'>
-<div id='header'>
-<div class='header section' id='hLeft'><div class='widget Header' data-version='1' id='Header1'>
-<div id='header-inner'>
-<div class='titlewrapper'>
-<h1 class='title'>
-Prediksi Togel Jitu Wadah4d
-</h1>
-</div>
- 
-<div class="match-card">
-<h4>27 Juni 2026</h4>
-
-TEAM BNF  (0)  vs  (2)  TEAM SABER SPRINT 
-</div>
- 
-<div class="match-card">
-<h4>28 Juni 2026</h4>
-
-TEAM SHAUN THE SHEEP (2)  vs   (0)   TEAM RASTA 
-</div> 
- 
-<div class="match-card">
-<h4>29 Juni 2026</h4>
-
-TEAM NAGAHITAM  (1)   vs   (2)  TEAM RASTA 
-</div>
- 
-<div class="match-card">
-<h4>30 Juni 2026</h4>
-
-TEAM BINTANG 1   (1)  vs (2)    TEAM SABER SPRINT 
-<div class='descriptionwrapper'>
-<p class='description'><span>Sharing Angka-angka Togel Jitu </span></p>
-</div>
- 
-<div class="match-card">
-<h4>01 Juli 2026</h4>
-
-TEAM SHAUN THE SHEEP   (2)   vs   (0)    TEAM BNF 
-</div>
- 
-<div class="match-card">
-<h4>02 Juli 2026</h4>
-
-TEAM NAGAHITAM   (0)   vs   (2)    TEAM SABER SPRINT 
-</div>
- 
-<div class="match-card">
-<h4>03 Juli 2026</h4>
-
-TEAM RASTA (0)  vs   (2)     TEAM BNF 
-</div></div>
-<div class='header no-items section' id='hRight'></div>
-</div>
- 
-<div class="match-card">
-<h4>04 Juli 2026</h4>
-
-TEAM SABER SPRINT (0)  vs    (2)  TEAM SHAUN THE SHEEP 
-</div>
- 
-<div class="match-card">
-<h4>04 Juli 2026</h4>
-
-TEAM RASTA  (0)  vs  (2)  TEAM BINTANG 1 
-</div>
- 
-<div class="match-card">
-<h4>05 Juli 2026</h4>
-
-TEAM BINTANG 1   (0)  vs  (2)  TEAM SHAUN THE SHEEP 
-</div>
- 
-<div class="match-card">
-<h4>05 Juli 2026</h4>
-
-TEAM NAGAHITAM (2) vs  (1)  TEAM BNF 
-</div>
-
-<div class="match-card">
-<h4>06 Juli 2026 LOWER BRACKET</h4>
-
-BINTANG 1 (2) VS (3)  NAGAHITAM  
-</div>
-
-<div class="match-card">
-<h4>07 Juli 2026 UPPER BRACKET</h4>
-
-SHAUN THE SHEEP  (2)  VS  (3)   SABER SPRINT 
+</body>
+</html>
