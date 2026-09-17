@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -30,9 +29,7 @@ body {
     margin: auto;
 }
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* HEADER */
 
 .header {
     text-align: center;
@@ -68,9 +65,7 @@ body {
     font-size: 14px;
 }
 
-/* =====================================================
-   BUTTON
-===================================================== */
+/* BUTTON */
 
 .section-toggle {
     display: flex;
@@ -121,9 +116,7 @@ body {
     transition: .3s;
 }
 
-/* =====================================================
-   COLLAPSE
-===================================================== */
+/* COLLAPSE */
 
 .collapsible {
     max-height: 0;
@@ -142,9 +135,7 @@ body {
     margin-bottom: 55px;
 }
 
-/* =====================================================
-   GROUP
-===================================================== */
+/* GROUP */
 
 .groups {
     display: grid;
@@ -279,9 +270,7 @@ body {
     color: #f5c451;
 }
 
-/* =====================================================
-   PLAYOFF
-===================================================== */
+/* PLAYOFF */
 
 .playoff-content {
     padding-top: 10px;
@@ -475,9 +464,7 @@ body {
     font-weight: bold;
 }
 
-/* =====================================================
-   SCHEDULE
-===================================================== */
+/* SCHEDULE */
 
 .schedule-title {
     text-align: center;
@@ -716,12 +703,11 @@ body {
 ===================================================== */
 
 .sponsor-section {
-    padding-top: 10px;
-    text-align: center;
-}
+    margin-top: 65px;
 
-.sponsor-card {
     padding: 40px 20px 45px;
+
+    text-align: center;
 
     background:
         linear-gradient(
@@ -752,7 +738,7 @@ body {
     margin-bottom: 12px;
 }
 
-.sponsor-card h2 {
+.sponsor-section h2 {
     font-size: 25px;
 
     letter-spacing: 2px;
@@ -761,31 +747,22 @@ body {
 }
 
 .sponsor-image-box {
+  .sponsor-image-box {
     width: 260px;
     margin: auto;
     padding: 8px;
-
     background: #0d111d;
-
     border: 1px solid #30394d;
-
     border-radius: 14px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.30);
+    box-shadow: 0 10px 30px rgba(0,0,0,.30);
 }
 
 .sponsor-image {
     display: block;
-
     width: 100%;
-
     max-height: 120px;
-
     object-fit: contain;
-
     border-radius: 8px;
-
     background: transparent;
 }
 
@@ -809,9 +786,7 @@ body {
     font-size: 11px;
 }
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 
 footer {
     text-align: center;
@@ -825,9 +800,7 @@ footer {
     letter-spacing: 1px;
 }
 
-/* =====================================================
-   RESPONSIVE
-===================================================== */
+/* RESPONSIVE */
 
 @media(max-width: 900px) {
 
@@ -920,25 +893,22 @@ footer {
         padding: 14px;
     }
 
-    .sponsor-card {
+    .sponsor-section {
         padding: 30px 12px 35px;
     }
 
-    .sponsor-card h2 {
+    .sponsor-section h2 {
         font-size: 21px;
-    }
-
-    .sponsor-image-box {
-        width: 220px;
     }
 }
 </style>
-
 </head>
+
 
 <body>
 
 <div class="container">
+
 
 <!-- =====================================================
      HEADER
@@ -946,21 +916,20 @@ footer {
 
 <header class="header">
 
-```
-<div class="tag">
-    MOBILE LEGENDS : BANG BANG
-</div>
+    <div class="tag">
+        MOBILE LEGENDS : BANG BANG
+    </div>
 
-<h1>
-    MLBB <span>TOURNAMENT</span>
-</h1>
+    <h1>
+        MLBB <span>TOURNAMENT</span>
+    </h1>
 
-<p>
-    Srilanka MLBB Season 2 • Tournament
-</p>
-```
+    <p>
+        Srilanka MLBB Season 2 • Tournament
+    </p>
 
 </header>
+
 
 <!-- =====================================================
      GROUP STAGE BUTTON
@@ -968,27 +937,26 @@ footer {
 
 <div class="section-toggle">
 
-```
-<button
-    class="toggle-btn"
-    onclick="toggleSection('groupStage','groupArrow')"
->
-
-    <span class="icon">🏆</span>
-
-    <span>GROUP STAGE</span>
-
-    <span
-        class="arrow"
-        id="groupArrow"
+    <button
+        class="toggle-btn"
+        onclick="toggleSection('groupStage','groupArrow')"
     >
-        ▼
-    </span>
 
-</button>
-```
+        <span class="icon">🏆</span>
+
+        <span>GROUP STAGE</span>
+
+        <span
+            class="arrow"
+            id="groupArrow"
+        >
+            ▼
+        </span>
+
+    </button>
 
 </div>
+
 
 <!-- =====================================================
      GROUP STAGE
@@ -1001,371 +969,369 @@ footer {
 
 <div class="groups">
 
+
 <!-- GROUP A -->
 
 <div class="group">
 
-```
-<div class="group-title">
+    <div class="group-title">
 
-    <h2>GROUP A</h2>
+        <h2>GROUP A</h2>
 
-    <span>5 TEAMS</span>
+        <span>5 TEAMS</span>
+
+    </div>
+
+    <div class="team-list">
+
+        <div class="team qualified">
+
+            <div class="rank">01</div>
+
+            <div class="team-info">
+
+                <div class="logo">A1</div>
+
+                <div>
+                    <div class="team-name">
+                        Team Alpha
+                    </div>
+
+                    <div class="team-sub">
+                        QUALIFIED
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>4</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>12</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+        <div class="team qualified">
+
+            <div class="rank">02</div>
+
+            <div class="team-info">
+
+                <div class="logo">A2</div>
+
+                <div>
+                    <div class="team-name">
+                        Team Blaze
+                    </div>
+
+                    <div class="team-sub">
+                        QUALIFIED
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>3</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>9</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+        <div class="team">
+
+            <div class="rank">03</div>
+
+            <div class="team-info">
+
+                <div class="logo">A3</div>
+
+                <div>
+                    <div class="team-name">
+                        Team Nova
+                    </div>
+
+                    <div class="team-sub">
+                        GROUP STAGE
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>2</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>6</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+        <div class="team">
+
+            <div class="rank">04</div>
+
+            <div class="team-info">
+
+                <div class="logo">A4</div>
+
+                <div>
+                    <div class="team-name">
+                        Team Storm
+                    </div>
+
+                    <div class="team-sub">
+                        GROUP STAGE
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>1</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>3</strong>
+                PTS
+            </div>
+
+        </div>
+
+
+        <div class="team">
+
+            <div class="rank">05</div>
+
+            <div class="team-info">
+
+                <div class="logo">A5</div>
+
+                <div>
+                    <div class="team-name">
+                        Team Titan
+                    </div>
+
+                    <div class="team-sub">
+                        ELIMINATED
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="stat">
+                <strong>0</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>0</strong>
+                PTS
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
-<div class="team-list">
-
-    <div class="team qualified">
-
-        <div class="rank">01</div>
-
-        <div class="team-info">
-
-            <div class="logo">A1</div>
-
-            <div>
-                <div class="team-name">
-                    Team Alpha
-                </div>
-
-                <div class="team-sub">
-                    QUALIFIED
-                </div>
-            </div>
-
-        </div>
-
-        <div class="stat">
-            <strong>4</strong>
-            W
-        </div>
-
-        <div class="stat">
-            <strong>12</strong>
-            PTS
-        </div>
-
-    </div>
-
-
-    <div class="team qualified">
-
-        <div class="rank">02</div>
-
-        <div class="team-info">
-
-            <div class="logo">A2</div>
-
-            <div>
-                <div class="team-name">
-                    Team Blaze
-                </div>
-
-                <div class="team-sub">
-                    QUALIFIED
-                </div>
-            </div>
-
-        </div>
-
-        <div class="stat">
-            <strong>3</strong>
-            W
-        </div>
-
-        <div class="stat">
-            <strong>9</strong>
-            PTS
-        </div>
-
-    </div>
-
-
-    <div class="team">
-
-        <div class="rank">03</div>
-
-        <div class="team-info">
-
-            <div class="logo">A3</div>
-
-            <div>
-                <div class="team-name">
-                    Team Nova
-                </div>
-
-                <div class="team-sub">
-                    GROUP STAGE
-                </div>
-            </div>
-
-        </div>
-
-        <div class="stat">
-            <strong>2</strong>
-            W
-        </div>
-
-        <div class="stat">
-            <strong>6</strong>
-            PTS
-        </div>
-
-    </div>
-
-
-    <div class="team">
-
-        <div class="rank">04</div>
-
-        <div class="team-info">
-
-            <div class="logo">A4</div>
-
-            <div>
-                <div class="team-name">
-                    Team Storm
-                </div>
-
-                <div class="team-sub">
-                    GROUP STAGE
-                </div>
-            </div>
-
-        </div>
-
-        <div class="stat">
-            <strong>1</strong>
-            W
-        </div>
-
-        <div class="stat">
-            <strong>3</strong>
-            PTS
-        </div>
-
-    </div>
-
-
-    <div class="team">
-
-        <div class="rank">05</div>
-
-        <div class="team-info">
-
-            <div class="logo">A5</div>
-
-            <div>
-                <div class="team-name">
-                    Team Titan
-                </div>
-
-                <div class="team-sub">
-                    ELIMINATED
-                </div>
-            </div>
-
-        </div>
-
-        <div class="stat">
-            <strong>0</strong>
-            W
-        </div>
-
-        <div class="stat">
-            <strong>0</strong>
-            PTS
-        </div>
-
-    </div>
-
-</div>
-```
-
-</div>
 
 <!-- GROUP B -->
 
 <div class="group">
 
-```
-<div class="group-title">
+    <div class="group-title">
 
-    <h2>GROUP B</h2>
+        <h2>GROUP B</h2>
 
-    <span>5 TEAMS</span>
+        <span>5 TEAMS</span>
 
-</div>
+    </div>
 
-<div class="team-list">
+    <div class="team-list">
 
-    <div class="team qualified">
+        <div class="team qualified">
 
-        <div class="rank">01</div>
+            <div class="rank">01</div>
 
-        <div class="team-info">
+            <div class="team-info">
 
-            <div class="logo">B1</div>
+                <div class="logo">B1</div>
 
-            <div>
-                <div class="team-name">
-                    Team Phoenix
+                <div>
+                    <div class="team-name">
+                        Team Phoenix
+                    </div>
+
+                    <div class="team-sub">
+                        QUALIFIED
+                    </div>
                 </div>
 
-                <div class="team-sub">
-                    QUALIFIED
-                </div>
+            </div>
+
+            <div class="stat">
+                <strong>4</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>12</strong>
+                PTS
             </div>
 
         </div>
 
-        <div class="stat">
-            <strong>4</strong>
-            W
-        </div>
 
-        <div class="stat">
-            <strong>12</strong>
-            PTS
-        </div>
+        <div class="team qualified">
 
-    </div>
+            <div class="rank">02</div>
 
+            <div class="team-info">
 
-    <div class="team qualified">
+                <div class="logo">B2</div>
 
-        <div class="rank">02</div>
+                <div>
+                    <div class="team-name">
+                        Team Vortex
+                    </div>
 
-        <div class="team-info">
-
-            <div class="logo">B2</div>
-
-            <div>
-                <div class="team-name">
-                    Team Vortex
+                    <div class="team-sub">
+                        QUALIFIED
+                    </div>
                 </div>
 
-                <div class="team-sub">
-                    QUALIFIED
-                </div>
+            </div>
+
+            <div class="stat">
+                <strong>3</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>9</strong>
+                PTS
             </div>
 
         </div>
 
-        <div class="stat">
-            <strong>3</strong>
-            W
-        </div>
 
-        <div class="stat">
-            <strong>9</strong>
-            PTS
-        </div>
+        <div class="team">
 
-    </div>
+            <div class="rank">03</div>
 
+            <div class="team-info">
 
-    <div class="team">
+                <div class="logo">B3</div>
 
-        <div class="rank">03</div>
+                <div>
+                    <div class="team-name">
+                        Team Eclipse
+                    </div>
 
-        <div class="team-info">
-
-            <div class="logo">B3</div>
-
-            <div>
-                <div class="team-name">
-                    Team Eclipse
+                    <div class="team-sub">
+                        GROUP STAGE
+                    </div>
                 </div>
 
-                <div class="team-sub">
-                    GROUP STAGE
-                </div>
+            </div>
+
+            <div class="stat">
+                <strong>2</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>6</strong>
+                PTS
             </div>
 
         </div>
 
-        <div class="stat">
-            <strong>2</strong>
-            W
-        </div>
 
-        <div class="stat">
-            <strong>6</strong>
-            PTS
-        </div>
+        <div class="team">
 
-    </div>
+            <div class="rank">04</div>
 
+            <div class="team-info">
 
-    <div class="team">
+                <div class="logo">B4</div>
 
-        <div class="rank">04</div>
+                <div>
+                    <div class="team-name">
+                        Team Venom
+                    </div>
 
-        <div class="team-info">
-
-            <div class="logo">B4</div>
-
-            <div>
-                <div class="team-name">
-                    Team Venom
+                    <div class="team-sub">
+                        GROUP STAGE
+                    </div>
                 </div>
 
-                <div class="team-sub">
-                    GROUP STAGE
-                </div>
+            </div>
+
+            <div class="stat">
+                <strong>1</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>3</strong>
+                PTS
             </div>
 
         </div>
 
-        <div class="stat">
-            <strong>1</strong>
-            W
-        </div>
 
-        <div class="stat">
-            <strong>3</strong>
-            PTS
-        </div>
+        <div class="team">
 
-    </div>
+            <div class="rank">05</div>
 
+            <div class="team-info">
 
-    <div class="team">
+                <div class="logo">B5</div>
 
-        <div class="rank">05</div>
+                <div>
+                    <div class="team-name">
+                        Team Inferno
+                    </div>
 
-        <div class="team-info">
-
-            <div class="logo">B5</div>
-
-            <div>
-                <div class="team-name">
-                    Team Inferno
+                    <div class="team-sub">
+                        ELIMINATED
+                    </div>
                 </div>
 
-                <div class="team-sub">
-                    ELIMINATED
-                </div>
+            </div>
+
+            <div class="stat">
+                <strong>0</strong>
+                W
+            </div>
+
+            <div class="stat">
+                <strong>0</strong>
+                PTS
             </div>
 
         </div>
 
-        <div class="stat">
-            <strong>0</strong>
-            W
-        </div>
-
-        <div class="stat">
-            <strong>0</strong>
-            PTS
-        </div>
-
     </div>
-
-</div>
-```
 
 </div>
 
@@ -1373,33 +1339,33 @@ footer {
 
 </section>
 
+
 <!-- =====================================================
      PLAYOFF BUTTON
 ===================================================== -->
 
 <div class="section-toggle">
 
-```
-<button
-    class="toggle-btn"
-    onclick="toggleSection('playoffStage','playoffArrow')"
->
-
-    <span class="icon">⚔️</span>
-
-    <span>PLAYOFF BRACKET</span>
-
-    <span
-        class="arrow"
-        id="playoffArrow"
+    <button
+        class="toggle-btn"
+        onclick="toggleSection('playoffStage','playoffArrow')"
     >
-        ▼
-    </span>
 
-</button>
-```
+        <span class="icon">⚔️</span>
+
+        <span>PLAYOFF BRACKET</span>
+
+        <span
+            class="arrow"
+            id="playoffArrow"
+        >
+            ▼
+        </span>
+
+    </button>
 
 </div>
+
 
 <!-- =====================================================
      PLAYOFF
@@ -1414,136 +1380,130 @@ footer {
 
 <div class="playoff-title">
 
-```
-<h2>PLAYOFF BRACKET</h2>
+    <h2>PLAYOFF BRACKET</h2>
 
-<p>
-    Top 2 teams from each group advance
-</p>
-```
+    <p>
+        Top 2 teams from each group advance
+    </p>
 
 </div>
 
+
 <div class="bracket">
+
 
 <!-- SEMIFINAL -->
 
 <div class="round">
 
-```
-<div class="round-title">
-    SEMIFINAL
+    <div class="round-title">
+        SEMIFINAL
+    </div>
+
+    <div class="match">
+
+        <div class="match-title">
+            MATCH 01
+        </div>
+
+        <div class="player">
+            <span>Group A #1</span>
+            <span class="score">—</span>
+        </div>
+
+        <div class="player">
+            <span>Group B #2</span>
+            <span class="score">—</span>
+        </div>
+
+    </div>
+
+
+    <div class="match">
+
+        <div class="match-title">
+            MATCH 02
+        </div>
+
+        <div class="player">
+            <span>Group B #1</span>
+            <span class="score">—</span>
+        </div>
+
+        <div class="player">
+            <span>Group A #2</span>
+            <span class="score">—</span>
+        </div>
+
+    </div>
+
 </div>
 
-<div class="match">
-
-    <div class="match-title">
-        MATCH 01
-    </div>
-
-    <div class="player">
-        <span>Group A #1</span>
-        <span class="score">—</span>
-    </div>
-
-    <div class="player">
-        <span>Group B #2</span>
-        <span class="score">—</span>
-    </div>
-
-</div>
-
-
-<div class="match">
-
-    <div class="match-title">
-        MATCH 02
-    </div>
-
-    <div class="player">
-        <span>Group B #1</span>
-        <span class="score">—</span>
-    </div>
-
-    <div class="player">
-        <span>Group A #2</span>
-        <span class="score">—</span>
-    </div>
-
-</div>
-```
-
-</div>
 
 <div class="round">
 
-```
-<div class="connector"></div>
+    <div class="connector"></div>
 
-<div class="connector"></div>
-```
+    <div class="connector"></div>
 
 </div>
+
 
 <!-- GRAND FINAL -->
 
 <div class="round">
 
-```
-<div class="round-title">
-    GRAND FINAL
-</div>
-
-<div class="match">
-
-    <div class="match-title">
+    <div class="round-title">
         GRAND FINAL
     </div>
 
-    <div class="player">
-        <span>Winner SF1</span>
-        <span class="score">—</span>
-    </div>
+    <div class="match">
 
-    <div class="player">
-        <span>Winner SF2</span>
-        <span class="score">—</span>
+        <div class="match-title">
+            GRAND FINAL
+        </div>
+
+        <div class="player">
+            <span>Winner SF1</span>
+            <span class="score">—</span>
+        </div>
+
+        <div class="player">
+            <span>Winner SF2</span>
+            <span class="score">—</span>
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <div class="round">
 
-```
-<div class="connector"></div>
-```
+    <div class="connector"></div>
 
 </div>
+
 
 <!-- CHAMPION -->
 
 <div class="final">
 
-```
-<div class="final-box">
+    <div class="final-box">
 
-    <div class="trophy">
-        🏆
+        <div class="trophy">
+            🏆
+        </div>
+
+        <h3>
+            CHAMPION
+        </h3>
+
+        <div class="champion">
+            TBD
+        </div>
+
     </div>
-
-    <h3>
-        CHAMPION
-    </h3>
-
-    <div class="champion">
-        TBD
-    </div>
-
-</div>
-```
 
 </div>
 
@@ -1553,33 +1513,33 @@ footer {
 
 </section>
 
+
 <!-- =====================================================
      SCHEDULE BUTTON
 ===================================================== -->
 
 <div class="section-toggle">
 
-```
-<button
-    class="toggle-btn"
-    onclick="toggleSection('scheduleStage','scheduleArrow')"
->
-
-    <span class="icon">📅</span>
-
-    <span>MATCH SCHEDULE</span>
-
-    <span
-        class="arrow"
-        id="scheduleArrow"
+    <button
+        class="toggle-btn"
+        onclick="toggleSection('scheduleStage','scheduleArrow')"
     >
-        ▼
-    </span>
 
-</button>
-```
+        <span class="icon">📅</span>
+
+        <span>MATCH SCHEDULE</span>
+
+        <span
+            class="arrow"
+            id="scheduleArrow"
+        >
+            ▼
+        </span>
+
+    </button>
 
 </div>
+
 
 <!-- =====================================================
      MATCH SCHEDULE
@@ -1592,15 +1552,14 @@ footer {
 
 <div class="schedule-title">
 
-```
-<h2>MATCH SCHEDULE</h2>
+    <h2>MATCH SCHEDULE</h2>
 
-<p>
-    Round Robin • Setiap tim bertemu semua tim dalam grup
-</p>
-```
+    <p>
+        Round Robin • Setiap tim bertemu semua tim dalam grup
+    </p>
 
 </div>
+
 
 <!-- GROUP A -->
 
@@ -1608,13 +1567,12 @@ footer {
 
 <div class="schedule-group-header">
 
-```
-<h3>GROUP A</h3>
+    <h3>GROUP A</h3>
 
-<span>10 MATCHES</span>
-```
+    <span>10 MATCHES</span>
 
 </div>
+
 
 <!-- A ROUND 1 -->
 
@@ -1622,91 +1580,131 @@ footer {
 
 <div class="round-header">
 
-```
-<div class="round-number">01</div>
+    <div class="round-number">01</div>
 
-<div>
+    <div>
 
-    <div class="round-name">
-        ROUND 1
-    </div>
+        <div class="round-name">
+            ROUND 1
+        </div>
 
-    <div class="round-info">
-        2 pertandingan
+        <div class="round-info">
+            2 pertandingan
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <div class="schedule-matches">
 
-<div class="schedule-match">
-
-```
-<div class="match-date">
-
-    <span class="day">01 OCT</span>
-    <span class="time">18:00</span>
-
-</div>
-
-<div class="schedule-teams">
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Alpha</span>
-        <span class="schedule-team-code">A1</span>
-    </div>
-
-    <div class="vs">VS</div>
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Blaze</span>
-        <span class="schedule-team-code">A2</span>
-    </div>
-
-</div>
-
-<div class="match-id">A-01</div>
-```
-
-</div>
 
 <div class="schedule-match">
 
-```
-<div class="match-date">
+    <div class="match-date">
 
-    <span class="day">01 OCT</span>
-    <span class="time">20:00</span>
+        <span class="day">
+            01 OCT
+        </span>
 
-</div>
+        <span class="time">
+            18:00
+        </span>
 
-<div class="schedule-teams">
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Nova</span>
-        <span class="schedule-team-code">A3</span>
     </div>
 
-    <div class="vs">VS</div>
+    <div class="schedule-teams">
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Storm</span>
-        <span class="schedule-team-code">A4</span>
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Alpha
+            </span>
+
+            <span class="schedule-team-code">
+                A1
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Blaze
+            </span>
+
+            <span class="schedule-team-code">
+                A2
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        A-01
     </div>
 
 </div>
 
-<div class="match-id">A-02</div>
-```
+
+<div class="schedule-match">
+
+    <div class="match-date">
+
+        <span class="day">
+            01 OCT
+        </span>
+
+        <span class="time">
+            20:00
+        </span>
+
+    </div>
+
+    <div class="schedule-teams">
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Nova
+            </span>
+
+            <span class="schedule-team-code">
+                A3
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Storm
+            </span>
+
+            <span class="schedule-team-code">
+                A4
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        A-02
+    </div>
 
 </div>
 
 </div>
 
 </div>
+
 
 <!-- A ROUND 2 -->
 
@@ -1714,87 +1712,131 @@ footer {
 
 <div class="round-header">
 
-```
-<div class="round-number">02</div>
+    <div class="round-number">02</div>
 
-<div>
+    <div>
 
-    <div class="round-name">
-        ROUND 2
-    </div>
+        <div class="round-name">
+            ROUND 2
+        </div>
 
-    <div class="round-info">
-        2 pertandingan
+        <div class="round-info">
+            2 pertandingan
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <div class="schedule-matches">
 
-<div class="schedule-match">
-
-```
-<div class="match-date">
-    <span class="day">02 OCT</span>
-    <span class="time">18:00</span>
-</div>
-
-<div class="schedule-teams">
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Alpha</span>
-        <span class="schedule-team-code">A1</span>
-    </div>
-
-    <div class="vs">VS</div>
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Nova</span>
-        <span class="schedule-team-code">A3</span>
-    </div>
-
-</div>
-
-<div class="match-id">A-03</div>
-```
-
-</div>
 
 <div class="schedule-match">
 
-```
-<div class="match-date">
-    <span class="day">02 OCT</span>
-    <span class="time">20:00</span>
-</div>
+    <div class="match-date">
 
-<div class="schedule-teams">
+        <span class="day">
+            02 OCT
+        </span>
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Blaze</span>
-        <span class="schedule-team-code">A2</span>
+        <span class="time">
+            18:00
+        </span>
+
     </div>
 
-    <div class="vs">VS</div>
+    <div class="schedule-teams">
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Titan</span>
-        <span class="schedule-team-code">A5</span>
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Alpha
+            </span>
+
+            <span class="schedule-team-code">
+                A1
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Nova
+            </span>
+
+            <span class="schedule-team-code">
+                A3
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        A-03
     </div>
 
 </div>
 
-<div class="match-id">A-04</div>
-```
+
+<div class="schedule-match">
+
+    <div class="match-date">
+
+        <span class="day">
+            02 OCT
+        </span>
+
+        <span class="time">
+            20:00
+        </span>
+
+    </div>
+
+    <div class="schedule-teams">
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Blaze
+            </span>
+
+            <span class="schedule-team-code">
+                A2
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Titan
+            </span>
+
+            <span class="schedule-team-code">
+                A5
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        A-04
+    </div>
 
 </div>
 
 </div>
 
 </div>
+
 
 <!-- A ROUND 3 -->
 
@@ -1802,87 +1844,131 @@ footer {
 
 <div class="round-header">
 
-```
-<div class="round-number">03</div>
+    <div class="round-number">03</div>
 
-<div>
+    <div>
 
-    <div class="round-name">
-        ROUND 3
-    </div>
+        <div class="round-name">
+            ROUND 3
+        </div>
 
-    <div class="round-info">
-        2 pertandingan
+        <div class="round-info">
+            2 pertandingan
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <div class="schedule-matches">
 
-<div class="schedule-match">
-
-```
-<div class="match-date">
-    <span class="day">03 OCT</span>
-    <span class="time">18:00</span>
-</div>
-
-<div class="schedule-teams">
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Storm</span>
-        <span class="schedule-team-code">A4</span>
-    </div>
-
-    <div class="vs">VS</div>
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Titan</span>
-        <span class="schedule-team-code">A5</span>
-    </div>
-
-</div>
-
-<div class="match-id">A-05</div>
-```
-
-</div>
 
 <div class="schedule-match">
 
-```
-<div class="match-date">
-    <span class="day">03 OCT</span>
-    <span class="time">20:00</span>
-</div>
+    <div class="match-date">
 
-<div class="schedule-teams">
+        <span class="day">
+            03 OCT
+        </span>
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Blaze</span>
-        <span class="schedule-team-code">A2</span>
+        <span class="time">
+            18:00
+        </span>
+
     </div>
 
-    <div class="vs">VS</div>
+    <div class="schedule-teams">
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Nova</span>
-        <span class="schedule-team-code">A3</span>
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Storm
+            </span>
+
+            <span class="schedule-team-code">
+                A4
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Titan
+            </span>
+
+            <span class="schedule-team-code">
+                A5
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        A-05
     </div>
 
 </div>
 
-<div class="match-id">A-06</div>
-```
+
+<div class="schedule-match">
+
+    <div class="match-date">
+
+        <span class="day">
+            03 OCT
+        </span>
+
+        <span class="time">
+            20:00
+        </span>
+
+    </div>
+
+    <div class="schedule-teams">
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Blaze
+            </span>
+
+            <span class="schedule-team-code">
+                A2
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Nova
+            </span>
+
+            <span class="schedule-team-code">
+                A3
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        A-06
+    </div>
 
 </div>
 
 </div>
 
 </div>
+
 
 <!-- A ROUND 4 -->
 
@@ -1890,87 +1976,131 @@ footer {
 
 <div class="round-header">
 
-```
-<div class="round-number">04</div>
+    <div class="round-number">04</div>
 
-<div>
+    <div>
 
-    <div class="round-name">
-        ROUND 4
-    </div>
+        <div class="round-name">
+            ROUND 4
+        </div>
 
-    <div class="round-info">
-        2 pertandingan
+        <div class="round-info">
+            2 pertandingan
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <div class="schedule-matches">
 
-<div class="schedule-match">
-
-```
-<div class="match-date">
-    <span class="day">04 OCT</span>
-    <span class="time">18:00</span>
-</div>
-
-<div class="schedule-teams">
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Alpha</span>
-        <span class="schedule-team-code">A1</span>
-    </div>
-
-    <div class="vs">VS</div>
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Storm</span>
-        <span class="schedule-team-code">A4</span>
-    </div>
-
-</div>
-
-<div class="match-id">A-07</div>
-```
-
-</div>
 
 <div class="schedule-match">
 
-```
-<div class="match-date">
-    <span class="day">04 OCT</span>
-    <span class="time">20:00</span>
-</div>
+    <div class="match-date">
 
-<div class="schedule-teams">
+        <span class="day">
+            04 OCT
+        </span>
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Nova</span>
-        <span class="schedule-team-code">A3</span>
+        <span class="time">
+            18:00
+        </span>
+
     </div>
 
-    <div class="vs">VS</div>
+    <div class="schedule-teams">
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Titan</span>
-        <span class="schedule-team-code">A5</span>
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Alpha
+            </span>
+
+            <span class="schedule-team-code">
+                A1
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Storm
+            </span>
+
+            <span class="schedule-team-code">
+                A4
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        A-07
     </div>
 
 </div>
 
-<div class="match-id">A-08</div>
-```
+
+<div class="schedule-match">
+
+    <div class="match-date">
+
+        <span class="day">
+            04 OCT
+        </span>
+
+        <span class="time">
+            20:00
+        </span>
+
+    </div>
+
+    <div class="schedule-teams">
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Nova
+            </span>
+
+            <span class="schedule-team-code">
+                A3
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Titan
+            </span>
+
+            <span class="schedule-team-code">
+                A5
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        A-08
+    </div>
 
 </div>
 
 </div>
 
 </div>
+
 
 <!-- A ROUND 5 -->
 
@@ -1978,81 +2108,124 @@ footer {
 
 <div class="round-header">
 
-```
-<div class="round-number">05</div>
+    <div class="round-number">05</div>
 
-<div>
+    <div>
 
-    <div class="round-name">
-        ROUND 5
-    </div>
+        <div class="round-name">
+            ROUND 5
+        </div>
 
-    <div class="round-info">
-        2 pertandingan
+        <div class="round-info">
+            2 pertandingan
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <div class="schedule-matches">
 
-<div class="schedule-match">
-
-```
-<div class="match-date">
-    <span class="day">05 OCT</span>
-    <span class="time">18:00</span>
-</div>
-
-<div class="schedule-teams">
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Blaze</span>
-        <span class="schedule-team-code">A2</span>
-    </div>
-
-    <div class="vs">VS</div>
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Storm</span>
-        <span class="schedule-team-code">A4</span>
-    </div>
-
-</div>
-
-<div class="match-id">A-09</div>
-```
-
-</div>
 
 <div class="schedule-match">
 
-```
-<div class="match-date">
-    <span class="day">05 OCT</span>
-    <span class="time">20:00</span>
-</div>
+    <div class="match-date">
 
-<div class="schedule-teams">
+        <span class="day">
+            05 OCT
+        </span>
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Alpha</span>
-        <span class="schedule-team-code">A1</span>
+        <span class="time">
+            18:00
+        </span>
+
     </div>
 
-    <div class="vs">VS</div>
+    <div class="schedule-teams">
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Titan</span>
-        <span class="schedule-team-code">A5</span>
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Blaze
+            </span>
+
+            <span class="schedule-team-code">
+                A2
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Storm
+            </span>
+
+            <span class="schedule-team-code">
+                A4
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        A-09
     </div>
 
 </div>
 
-<div class="match-id">A-10</div>
-```
+
+<div class="schedule-match">
+
+    <div class="match-date">
+
+        <span class="day">
+            05 OCT
+        </span>
+
+        <span class="time">
+            20:00
+        </span>
+
+    </div>
+
+    <div class="schedule-teams">
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Alpha
+            </span>
+
+            <span class="schedule-team-code">
+                A1
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Titan
+            </span>
+
+            <span class="schedule-team-code">
+                A5
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        A-10
+    </div>
 
 </div>
 
@@ -2061,6 +2234,7 @@ footer {
 </div>
 
 </div>
+
 
 <!-- =====================================================
      GROUP B
@@ -2070,13 +2244,12 @@ footer {
 
 <div class="schedule-group-header">
 
-```
-<h3>GROUP B</h3>
+    <h3>GROUP B</h3>
 
-<span>10 MATCHES</span>
-```
+    <span>10 MATCHES</span>
 
 </div>
+
 
 <!-- B ROUND 1 -->
 
@@ -2084,87 +2257,131 @@ footer {
 
 <div class="round-header">
 
-```
-<div class="round-number">01</div>
+    <div class="round-number">01</div>
 
-<div>
+    <div>
 
-    <div class="round-name">
-        ROUND 1
-    </div>
+        <div class="round-name">
+            ROUND 1
+        </div>
 
-    <div class="round-info">
-        2 pertandingan
+        <div class="round-info">
+            2 pertandingan
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <div class="schedule-matches">
 
-<div class="schedule-match">
-
-```
-<div class="match-date">
-    <span class="day">01 OCT</span>
-    <span class="time">18:00</span>
-</div>
-
-<div class="schedule-teams">
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Phoenix</span>
-        <span class="schedule-team-code">B1</span>
-    </div>
-
-    <div class="vs">VS</div>
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Vortex</span>
-        <span class="schedule-team-code">B2</span>
-    </div>
-
-</div>
-
-<div class="match-id">B-01</div>
-```
-
-</div>
 
 <div class="schedule-match">
 
-```
-<div class="match-date">
-    <span class="day">01 OCT</span>
-    <span class="time">20:00</span>
-</div>
+    <div class="match-date">
 
-<div class="schedule-teams">
+        <span class="day">
+            01 OCT
+        </span>
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Eclipse</span>
-        <span class="schedule-team-code">B3</span>
+        <span class="time">
+            18:00
+        </span>
+
     </div>
 
-    <div class="vs">VS</div>
+    <div class="schedule-teams">
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Venom</span>
-        <span class="schedule-team-code">B4</span>
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Phoenix
+            </span>
+
+            <span class="schedule-team-code">
+                B1
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Vortex
+            </span>
+
+            <span class="schedule-team-code">
+                B2
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        B-01
     </div>
 
 </div>
 
-<div class="match-id">B-02</div>
-```
+
+<div class="schedule-match">
+
+    <div class="match-date">
+
+        <span class="day">
+            01 OCT
+        </span>
+
+        <span class="time">
+            20:00
+        </span>
+
+    </div>
+
+    <div class="schedule-teams">
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Eclipse
+            </span>
+
+            <span class="schedule-team-code">
+                B3
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Venom
+            </span>
+
+            <span class="schedule-team-code">
+                B4
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        B-02
+    </div>
 
 </div>
 
 </div>
 
 </div>
+
 
 <!-- B ROUND 2 -->
 
@@ -2172,87 +2389,131 @@ footer {
 
 <div class="round-header">
 
-```
-<div class="round-number">02</div>
+    <div class="round-number">02</div>
 
-<div>
+    <div>
 
-    <div class="round-name">
-        ROUND 2
-    </div>
+        <div class="round-name">
+            ROUND 2
+        </div>
 
-    <div class="round-info">
-        2 pertandingan
+        <div class="round-info">
+            2 pertandingan
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <div class="schedule-matches">
 
-<div class="schedule-match">
-
-```
-<div class="match-date">
-    <span class="day">02 OCT</span>
-    <span class="time">18:00</span>
-</div>
-
-<div class="schedule-teams">
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Phoenix</span>
-        <span class="schedule-team-code">B1</span>
-    </div>
-
-    <div class="vs">VS</div>
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Eclipse</span>
-        <span class="schedule-team-code">B3</span>
-    </div>
-
-</div>
-
-<div class="match-id">B-03</div>
-```
-
-</div>
 
 <div class="schedule-match">
 
-```
-<div class="match-date">
-    <span class="day">02 OCT</span>
-    <span class="time">20:00</span>
-</div>
+    <div class="match-date">
 
-<div class="schedule-teams">
+        <span class="day">
+            02 OCT
+        </span>
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Vortex</span>
-        <span class="schedule-team-code">B2</span>
+        <span class="time">
+            18:00
+        </span>
+
     </div>
 
-    <div class="vs">VS</div>
+    <div class="schedule-teams">
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Inferno</span>
-        <span class="schedule-team-code">B5</span>
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Phoenix
+            </span>
+
+            <span class="schedule-team-code">
+                B1
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Eclipse
+            </span>
+
+            <span class="schedule-team-code">
+                B3
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        B-03
     </div>
 
 </div>
 
-<div class="match-id">B-04</div>
-```
+
+<div class="schedule-match">
+
+    <div class="match-date">
+
+        <span class="day">
+            02 OCT
+        </span>
+
+        <span class="time">
+            20:00
+        </span>
+
+    </div>
+
+    <div class="schedule-teams">
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Vortex
+            </span>
+
+            <span class="schedule-team-code">
+                B2
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Inferno
+            </span>
+
+            <span class="schedule-team-code">
+                B5
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        B-04
+    </div>
 
 </div>
 
 </div>
 
 </div>
+
 
 <!-- B ROUND 3 -->
 
@@ -2260,87 +2521,131 @@ footer {
 
 <div class="round-header">
 
-```
-<div class="round-number">03</div>
+    <div class="round-number">03</div>
 
-<div>
+    <div>
 
-    <div class="round-name">
-        ROUND 3
-    </div>
+        <div class="round-name">
+            ROUND 3
+        </div>
 
-    <div class="round-info">
-        2 pertandingan
+        <div class="round-info">
+            2 pertandingan
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <div class="schedule-matches">
 
-<div class="schedule-match">
-
-```
-<div class="match-date">
-    <span class="day">03 OCT</span>
-    <span class="time">18:00</span>
-</div>
-
-<div class="schedule-teams">
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Venom</span>
-        <span class="schedule-team-code">B4</span>
-    </div>
-
-    <div class="vs">VS</div>
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Inferno</span>
-        <span class="schedule-team-code">B5</span>
-    </div>
-
-</div>
-
-<div class="match-id">B-05</div>
-```
-
-</div>
 
 <div class="schedule-match">
 
-```
-<div class="match-date">
-    <span class="day">03 OCT</span>
-    <span class="time">20:00</span>
-</div>
+    <div class="match-date">
 
-<div class="schedule-teams">
+        <span class="day">
+            03 OCT
+        </span>
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Vortex</span>
-        <span class="schedule-team-code">B2</span>
+        <span class="time">
+            18:00
+        </span>
+
     </div>
 
-    <div class="vs">VS</div>
+    <div class="schedule-teams">
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Eclipse</span>
-        <span class="schedule-team-code">B3</span>
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Venom
+            </span>
+
+            <span class="schedule-team-code">
+                B4
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Inferno
+            </span>
+
+            <span class="schedule-team-code">
+                B5
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        B-05
     </div>
 
 </div>
 
-<div class="match-id">B-06</div>
-```
+
+<div class="schedule-match">
+
+    <div class="match-date">
+
+        <span class="day">
+            03 OCT
+        </span>
+
+        <span class="time">
+            20:00
+        </span>
+
+    </div>
+
+    <div class="schedule-teams">
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Vortex
+            </span>
+
+            <span class="schedule-team-code">
+                B2
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Eclipse
+            </span>
+
+            <span class="schedule-team-code">
+                B3
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        B-06
+    </div>
 
 </div>
 
 </div>
 
 </div>
+
 
 <!-- B ROUND 4 -->
 
@@ -2348,87 +2653,131 @@ footer {
 
 <div class="round-header">
 
-```
-<div class="round-number">04</div>
+    <div class="round-number">04</div>
 
-<div>
+    <div>
 
-    <div class="round-name">
-        ROUND 4
-    </div>
+        <div class="round-name">
+            ROUND 4
+        </div>
 
-    <div class="round-info">
-        2 pertandingan
+        <div class="round-info">
+            2 pertandingan
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <div class="schedule-matches">
 
-<div class="schedule-match">
-
-```
-<div class="match-date">
-    <span class="day">04 OCT</span>
-    <span class="time">18:00</span>
-</div>
-
-<div class="schedule-teams">
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Phoenix</span>
-        <span class="schedule-team-code">B1</span>
-    </div>
-
-    <div class="vs">VS</div>
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Venom</span>
-        <span class="schedule-team-code">B4</span>
-    </div>
-
-</div>
-
-<div class="match-id">B-07</div>
-```
-
-</div>
 
 <div class="schedule-match">
 
-```
-<div class="match-date">
-    <span class="day">04 OCT</span>
-    <span class="time">20:00</span>
-</div>
+    <div class="match-date">
 
-<div class="schedule-teams">
+        <span class="day">
+            04 OCT
+        </span>
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Eclipse</span>
-        <span class="schedule-team-code">B3</span>
+        <span class="time">
+            18:00
+        </span>
+
     </div>
 
-    <div class="vs">VS</div>
+    <div class="schedule-teams">
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Inferno</span>
-        <span class="schedule-team-code">B5</span>
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Phoenix
+            </span>
+
+            <span class="schedule-team-code">
+                B1
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Venom
+            </span>
+
+            <span class="schedule-team-code">
+                B4
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        B-07
     </div>
 
 </div>
 
-<div class="match-id">B-08</div>
-```
+
+<div class="schedule-match">
+
+    <div class="match-date">
+
+        <span class="day">
+            04 OCT
+        </span>
+
+        <span class="time">
+            20:00
+        </span>
+
+    </div>
+
+    <div class="schedule-teams">
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Eclipse
+            </span>
+
+            <span class="schedule-team-code">
+                B3
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Inferno
+            </span>
+
+            <span class="schedule-team-code">
+                B5
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        B-08
+    </div>
 
 </div>
 
 </div>
 
 </div>
+
 
 <!-- B ROUND 5 -->
 
@@ -2436,81 +2785,124 @@ footer {
 
 <div class="round-header">
 
-```
-<div class="round-number">05</div>
+    <div class="round-number">05</div>
 
-<div>
+    <div>
 
-    <div class="round-name">
-        ROUND 5
-    </div>
+        <div class="round-name">
+            ROUND 5
+        </div>
 
-    <div class="round-info">
-        2 pertandingan
+        <div class="round-info">
+            2 pertandingan
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <div class="schedule-matches">
 
-<div class="schedule-match">
-
-```
-<div class="match-date">
-    <span class="day">05 OCT</span>
-    <span class="time">18:00</span>
-</div>
-
-<div class="schedule-teams">
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Vortex</span>
-        <span class="schedule-team-code">B2</span>
-    </div>
-
-    <div class="vs">VS</div>
-
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Venom</span>
-        <span class="schedule-team-code">B4</span>
-    </div>
-
-</div>
-
-<div class="match-id">B-09</div>
-```
-
-</div>
 
 <div class="schedule-match">
 
-```
-<div class="match-date">
-    <span class="day">05 OCT</span>
-    <span class="time">20:00</span>
-</div>
+    <div class="match-date">
 
-<div class="schedule-teams">
+        <span class="day">
+            05 OCT
+        </span>
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Phoenix</span>
-        <span class="schedule-team-code">B1</span>
+        <span class="time">
+            18:00
+        </span>
+
     </div>
 
-    <div class="vs">VS</div>
+    <div class="schedule-teams">
 
-    <div class="schedule-team">
-        <span class="schedule-team-name">Team Inferno</span>
-        <span class="schedule-team-code">B5</span>
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Vortex
+            </span>
+
+            <span class="schedule-team-code">
+                B2
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Venom
+            </span>
+
+            <span class="schedule-team-code">
+                B4
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        B-09
     </div>
 
 </div>
 
-<div class="match-id">B-10</div>
-```
+
+<div class="schedule-match">
+
+    <div class="match-date">
+
+        <span class="day">
+            05 OCT
+        </span>
+
+        <span class="time">
+            20:00
+        </span>
+
+    </div>
+
+    <div class="schedule-teams">
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Phoenix
+            </span>
+
+            <span class="schedule-team-code">
+                B1
+            </span>
+
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="schedule-team">
+
+            <span class="schedule-team-name">
+                Team Inferno
+            </span>
+
+            <span class="schedule-team-code">
+                B5
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="match-id">
+        B-10
+    </div>
 
 </div>
 
@@ -2522,100 +2914,53 @@ footer {
 
 </section>
 
-<!-- =====================================================
-     SPONSOR BUTTON
-===================================================== -->
-
-<div class="section-toggle">
-
-```
-<button
-    class="toggle-btn"
-    onclick="toggleSection('sponsorStage','sponsorArrow')"
->
-
-    <span class="icon">🤝</span>
-
-    <span>OFFICIAL SPONSOR</span>
-
-    <span
-        class="arrow"
-        id="sponsorArrow"
-    >
-        ▼
-    </span>
-
-</button>
-```
-
-</div>
 
 <!-- =====================================================
-     SPONSOR CONTENT
+     SPONSOR
 ===================================================== -->
 
-<section
-    id="sponsorStage"
-    class="collapsible"
->
-
-<div class="sponsor-section">
-
-```
-<div class="sponsor-card">
+<section class="sponsor-section">
 
     <div class="sponsor-label">
         OFFICIAL SPONSOR
     </div>
 
-    <h2>
-        OUR SPONSOR
-    </h2>
-
     <div class="sponsor-image-box">
 
+        <!--
+            GANTI "sponsor.jpg"
+            DENGAN NAMA FILE FOTO SPONSOR KAMU
+        -->
+
         <img
-            src="https://i.postimg.cc/FsrXhf4M/NOS-USA.png"
+            src= "https://i.postimg.cc/FsrXhf4M/NOS-USA.png"
             alt="Official Sponsor"
             class="sponsor-image"
         >
 
     </div>
 
+
     <div class="sponsor-name">
-        KO MC
+        KO MC 
     </div>
-
-    <div class="sponsor-desc">
-        Official Sponsor • Srilanka MLBB Season 2
-    </div>
-
-</div>
-```
-
-</div>
 
 </section>
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+
+<!-- FOOTER -->
 
 <footer>
 
-```
-SRILANKA MLBB SEASON 2
-•
-TOURNAMENT
-```
+    SRILANKA MLBB SEASON 2
+    •
+    TOURNAMENT
 
 </footer>
 
+
 </div>
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
 
 <script>
 
