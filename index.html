@@ -901,6 +901,110 @@ footer {
         font-size: 21px;
     }
 }
+/* =====================================================
+   GALLERY 20 FOTO
+===================================================== */
+
+.gallery-section {
+    margin-top: 35px;
+    padding: 30px 20px 35px;
+
+    background: rgba(15,20,34,.94);
+
+    border: 1px solid #252d42;
+    border-radius: 22px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.30);
+}
+
+.gallery-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.gallery-title h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.gallery-title p {
+    color: #69748a;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    background: #111726;
+    border: 1px solid #293249;
+
+    aspect-ratio: 1 / 1;
+
+    transition: .25s;
+}
+
+.gallery-item:hover {
+    border-color: #f5c451;
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35),
+        0 0 20px rgba(245,196,81,.08);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: .3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+
+/* TABLET */
+
+@media(max-width: 900px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+
+/* HP */
+
+@media(max-width: 600px) {
+
+    .gallery-section {
+        padding: 25px 12px 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gallery-title h2 {
+        font-size: 20px;
+    }
+
+}
 </style>
 </head>
 
@@ -2948,6 +3052,211 @@ footer {
     </div>
 
 </section>
+```html
+<!-- =====================================================
+     GALLERY 20 FOTO
+===================================================== -->
+
+<section class="gallery-section">
+
+    <div class="gallery-title">
+
+        <h2>TOURNAMENT GALLERY</h2>
+
+        <p>
+            Srilanka MLBB Season 2 • Photo Gallery
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+
+        <!-- FOTO 01 -->
+        <div class="gallery-item">
+            <img
+                src="foto1.jpg"
+                alt="Tournament Photo 01"
+            >
+        </div>
+
+
+        <!-- FOTO 02 -->
+        <div class="gallery-item">
+            <img
+                src="foto2.jpg"
+                alt="Tournament Photo 02"
+            >
+        </div>
+
+
+        <!-- FOTO 03 -->
+        <div class="gallery-item">
+            <img
+                src="foto3.jpg"
+                alt="Tournament Photo 03"
+            >
+        </div>
+
+
+        <!-- FOTO 04 -->
+        <div class="gallery-item">
+            <img
+                src="foto4.jpg"
+                alt="Tournament Photo 04"
+            >
+        </div>
+
+
+        <!-- FOTO 05 -->
+        <div class="gallery-item">
+            <img
+                src="foto5.jpg"
+                alt="Tournament Photo 05"
+            >
+        </div>
+
+
+        <!-- FOTO 06 -->
+        <div class="gallery-item">
+            <img
+                src="foto6.jpg"
+                alt="Tournament Photo 06"
+            >
+        </div>
+
+
+        <!-- FOTO 07 -->
+        <div class="gallery-item">
+            <img
+                src="foto7.jpg"
+                alt="Tournament Photo 07"
+            >
+        </div>
+
+
+        <!-- FOTO 08 -->
+        <div class="gallery-item">
+            <img
+                src="foto8.jpg"
+                alt="Tournament Photo 08"
+            >
+        </div>
+
+
+        <!-- FOTO 09 -->
+        <div class="gallery-item">
+            <img
+                src="foto9.jpg"
+                alt="Tournament Photo 09"
+            >
+        </div>
+
+
+        <!-- FOTO 10 -->
+        <div class="gallery-item">
+            <img
+                src="foto10.jpg"
+                alt="Tournament Photo 10"
+            >
+        </div>
+
+
+        <!-- FOTO 11 -->
+        <div class="gallery-item">
+            <img
+                src="foto11.jpg"
+                alt="Tournament Photo 11"
+            >
+        </div>
+
+
+        <!-- FOTO 12 -->
+        <div class="gallery-item">
+            <img
+                src="foto12.jpg"
+                alt="Tournament Photo 12"
+            >
+        </div>
+
+
+        <!-- FOTO 13 -->
+        <div class="gallery-item">
+            <img
+                src="foto13.jpg"
+                alt="Tournament Photo 13"
+            >
+        </div>
+
+
+        <!-- FOTO 14 -->
+        <div class="gallery-item">
+            <img
+                src="foto14.jpg"
+                alt="Tournament Photo 14"
+            >
+        </div>
+
+
+        <!-- FOTO 15 -->
+        <div class="gallery-item">
+            <img
+                src="foto15.jpg"
+                alt="Tournament Photo 15"
+            >
+        </div>
+
+
+        <!-- FOTO 16 -->
+        <div class="gallery-item">
+            <img
+                src="foto16.jpg"
+                alt="Tournament Photo 16"
+            >
+        </div>
+
+
+        <!-- FOTO 17 -->
+        <div class="gallery-item">
+            <img
+                src="foto17.jpg"
+                alt="Tournament Photo 17"
+            >
+        </div>
+
+
+        <!-- FOTO 18 -->
+        <div class="gallery-item">
+            <img
+                src="foto18.jpg"
+                alt="Tournament Photo 18"
+            >
+        </div>
+
+
+        <!-- FOTO 19 -->
+        <div class="gallery-item">
+            <img
+                src="foto19.jpg"
+                alt="Tournament Photo 19"
+            >
+        </div>
+
+
+        <!-- FOTO 20 -->
+        <div class="gallery-item">
+            <img
+                src="foto20.jpg"
+                alt="Tournament Photo 20"
+            >
+        </div>
+
+
+    </div>
+
+</section>
+```
 
 
 <!-- FOOTER -->
