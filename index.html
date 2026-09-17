@@ -391,152 +391,6 @@ body {
 
 
 /* =====================================================
-   📌 NOTED / TOURNAMENT RULES
-===================================================== */
-
-.rules-section {
-
-    margin-top: 25px;
-
-    background:
-        rgba(15,20,34,.94);
-
-    border:
-        1px solid #252d42;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 15px 50px rgba(0,0,0,.30);
-}
-
-.rules-header {
-
-    padding: 18px 22px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    background:
-        linear-gradient(
-            90deg,
-            #171e31,
-            #101522
-        );
-
-    border-bottom:
-        1px solid #252d42;
-}
-
-.rules-header h2 {
-
-    font-size: 20px;
-
-    letter-spacing: 1px;
-}
-
-.rules-header span {
-
-    color: #f5c451;
-
-    font-size: 11px;
-
-    font-weight: 900;
-
-    letter-spacing: 1px;
-}
-
-.rules-list {
-
-    padding: 18px;
-}
-
-.rule-item {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 13px;
-
-    padding: 13px 15px;
-
-    margin-bottom: 9px;
-
-    background:
-        #111726;
-
-    border:
-        1px solid #252e43;
-
-    border-radius: 11px;
-
-    transition: .2s;
-}
-
-.rule-item:last-child {
-    margin-bottom: 0;
-}
-
-.rule-item:hover {
-
-    border-color:
-        rgba(245,196,81,.55);
-
-    transform:
-        translateX(3px);
-
-    background:
-        #151c2c;
-}
-
-.rule-icon {
-
-    width: 34px;
-    height: 34px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 9px;
-
-    background:
-        rgba(245,196,81,.08);
-
-    border:
-        1px solid rgba(245,196,81,.18);
-
-    font-size: 16px;
-
-    flex-shrink: 0;
-}
-
-.rule-text {
-
-    color: #d9deea;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    line-height: 1.5;
-}
-
-.rule-text strong {
-
-    color: #f5c451;
-}
-
-
-/* =====================================================
    PLAYOFF
 ===================================================== */
 
@@ -1120,6 +974,9 @@ body {
     margin-top: 8px;
 }
 
+
+/* TEAM PLAYER GRID */
+
 .player-teams {
 
     display: grid;
@@ -1156,6 +1013,9 @@ body {
     transform:
         translateY(-3px);
 }
+
+
+/* TEAM HEADER */
 
 .player-team-header {
 
@@ -1244,6 +1104,9 @@ body {
 
     letter-spacing: 1px;
 }
+
+
+/* PLAYER LIST */
 
 .player-list {
 
@@ -1649,35 +1512,6 @@ footer {
         padding: 10px;
     }
 
-    /* RULES MOBILE */
-
-    .rules-header {
-        padding: 16px;
-    }
-
-    .rules-header h2 {
-        font-size: 17px;
-    }
-
-    .rules-list {
-        padding: 12px;
-    }
-
-    .rule-item {
-        padding: 11px 12px;
-        gap: 10px;
-    }
-
-    .rule-icon {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-
-    .rule-text {
-        font-size: 12px;
-    }
-
 }
 
 </style>
@@ -1769,6 +1603,8 @@ footer {
 
             <div class="team-info">
 
+                <div class="logo">A1</div>
+
                 <div>
 
                     <div class="team-name">
@@ -1802,10 +1638,13 @@ footer {
 
             <div class="team-info">
 
+                <div class="logo">A2</div>
+
                 <div>
 
                     <div class="team-name">
                         BOTUNA
+
                     </div>
 
                     <div class="team-sub">
@@ -1834,6 +1673,8 @@ footer {
             <div class="rank">03</div>
 
             <div class="team-info">
+
+                <div class="logo">A3</div>
 
                 <div>
 
@@ -1868,10 +1709,12 @@ footer {
 
             <div class="team-info">
 
+                <div class="logo">A4</div>
+
                 <div>
 
                     <div class="team-name">
-                        EL J3MB4Y
+                        EL J3MB4Y ESPORT
                     </div>
 
                     <div class="team-sub">
@@ -1900,6 +1743,8 @@ footer {
             <div class="rank">05</div>
 
             <div class="team-info">
+
+                <div class="logo">A5</div>
 
                 <div>
 
@@ -1952,14 +1797,16 @@ footer {
 
             <div class="team-info">
 
+                <div class="logo">B1</div>
+
                 <div>
 
                     <div class="team-name">
-                        RIBAK SUDE ESPORT
+                       RIBAK SUDE ESPORT
                     </div>
 
                     <div class="team-sub">
-                        UPPER BRACKET
+                        UPPER BRACKET 
                     </div>
 
                 </div>
@@ -1984,6 +1831,8 @@ footer {
             <div class="rank">02</div>
 
             <div class="team-info">
+
+                <div class="logo">B2</div>
 
                 <div>
 
@@ -2018,6 +1867,8 @@ footer {
 
             <div class="team-info">
 
+                <div class="logo">B3</div>
+
                 <div>
 
                     <div class="team-name">
@@ -2051,10 +1902,12 @@ footer {
 
             <div class="team-info">
 
+                <div class="logo">B4</div>
+
                 <div>
 
                     <div class="team-name">
-                        /A ESPORTT
+                       /A ESPORTT
                     </div>
 
                     <div class="team-sub">
@@ -2083,6 +1936,8 @@ footer {
             <div class="rank">05</div>
 
             <div class="team-info">
+
+                <div class="logo">B5</div>
 
                 <div>
 
@@ -2113,124 +1968,6 @@ footer {
     </div>
 
 </div>
-
-</div>
-
-
-<!-- =====================================================
-     📌 NOTED
-===================================================== -->
-
-<div class="rules-section">
-
-    <div class="rules-header">
-
-        <h2>
-            📌 NOTED
-        </h2>
-
-        <span>
-            TOURNAMENT RULES
-        </span>
-
-    </div>
-
-
-    <div class="rules-list">
-
-
-        <div class="rule-item">
-
-            <div class="rule-icon">
-                🥇
-            </div>
-
-            <div class="rule-text">
-                Peringkat <strong>1 Grup</strong> = Upper Bracket Playoff
-            </div>
-
-        </div>
-
-
-        <div class="rule-item">
-
-            <div class="rule-icon">
-                🥈
-            </div>
-
-            <div class="rule-text">
-                Peringkat <strong>2 Grup</strong> = Playoff
-            </div>
-
-        </div>
-
-
-        <div class="rule-item">
-
-            <div class="rule-icon">
-                ❌
-            </div>
-
-            <div class="rule-text">
-                Peringkat <strong>3, 4, 5</strong> = Gugur
-            </div>
-
-        </div>
-
-
-        <div class="rule-item">
-
-            <div class="rule-icon">
-                ✅
-            </div>
-
-            <div class="rule-text">
-                Menang <strong>(2 - 0)</strong> = <strong>3 Poin</strong>
-            </div>
-
-        </div>
-
-
-        <div class="rule-item">
-
-            <div class="rule-icon">
-                ✅
-            </div>
-
-            <div class="rule-text">
-                Menang <strong>(2 - 1)</strong> = <strong>2 Poin</strong>
-            </div>
-
-        </div>
-
-
-        <div class="rule-item">
-
-            <div class="rule-icon">
-                🟡
-            </div>
-
-            <div class="rule-text">
-                Kalah <strong>(1 - 2)</strong> = <strong>1 Poin</strong>
-            </div>
-
-        </div>
-
-
-        <div class="rule-item">
-
-            <div class="rule-icon">
-                ❌
-            </div>
-
-            <div class="rule-text">
-                Kalah <strong>(0 - 2)</strong> = <strong>0 Poin</strong>
-            </div>
-
-        </div>
-
-
-    </div>
 
 </div>
 
@@ -2433,7 +2170,7 @@ footer {
         </h3>
 
         <div class="champion">
-            WINNER MATCH 01 VS WINNER SEMIFINAL
+            WINNER MATCH 01 VS WINNER SEMIFINAL 
         </div>
 
     </div>
@@ -2490,7 +2227,7 @@ footer {
     </h2>
 
     <p>
-        • Setiap tim bertemu semua tim dalam grup •
+         • Setiap tim bertemu semua tim dalam grup •
     </p>
 
 </div>
@@ -2627,7 +2364,7 @@ footer {
                     <div class="schedule-team">
 
                         <span class="schedule-team-name">
-                            EL J3MB4Y
+                            EL J3MB4Y ESPORT
                         </span>
 
                         <span class="schedule-team-code">
@@ -2828,7 +2565,7 @@ footer {
                     <div class="schedule-team">
 
                         <span class="schedule-team-name">
-                            EL J3MB4Y
+                            EL J3MB4Y ESPORT
                         </span>
 
                         <span class="schedule-team-code">
@@ -2979,7 +2716,7 @@ footer {
                     <div class="schedule-team">
 
                         <span class="schedule-team-name">
-                            EL J3MB4Y
+                            EL J3MB4Y ESPORT
                         </span>
 
                         <span class="schedule-team-code">
@@ -3114,7 +2851,7 @@ footer {
                     <div class="schedule-team">
 
                         <span class="schedule-team-name">
-                            EL J3MB4Y
+                            EL J3MB4Y ESPORT
                         </span>
 
                         <span class="schedule-team-code">
@@ -3207,6 +2944,7 @@ footer {
 
     </div>
 
+    <!-- B1 -->
 
     <div class="schedule-round">
 
@@ -3342,6 +3080,8 @@ footer {
     </div>
 
 
+    <!-- B2 -->
+
     <div class="schedule-round">
 
         <div class="round-header">
@@ -3475,6 +3215,8 @@ footer {
 
     </div>
 
+
+    <!-- B3 -->
 
     <div class="schedule-round">
 
@@ -3610,6 +3352,8 @@ footer {
     </div>
 
 
+    <!-- B4 -->
+
     <div class="schedule-round">
 
         <div class="round-header">
@@ -3743,6 +3487,8 @@ footer {
 
     </div>
 
+
+    <!-- B5 -->
 
     <div class="schedule-round">
 
@@ -4221,7 +3967,7 @@ footer {
             <div>
 
                 <div class="player-team-name">
-                    EL J3MB4Y
+                    EL J3MB4Y ESPORT
                 </div>
 
                 <div class="player-team-region">
@@ -4488,7 +4234,7 @@ footer {
             <div>
 
                 <div class="player-team-name">
-                    N1C3 ESPORT
+                     N1C3 ESPORT
                 </div>
 
                 <div class="player-team-region">
@@ -4910,7 +4656,145 @@ footer {
 <!-- =====================================================
      FOOTER
 ===================================================== -->
+<!-- RULES MATCH -->
+<section class="section">
+    <button class="section-title" onclick="toggleSection(this)">
+     
+        <span></span>
+    </button>
 
+    <div class="section-content">
+
+        <div class="rules-box">
+            <h3>⚔️ MATCH RULES</h3>
+
+            <div class="rule-item">
+                <strong>1. Format Pertandingan</strong>
+                <p>
+                    Semua pertandingan menggunakan format Best of 3 (BO3),
+                    kecuali pertandingan yang telah ditentukan menggunakan
+                    format Best of 5 (BO5).
+                </p>
+            </div>
+
+            <div class="rule-item">
+                <strong>2. Jaringan & Room</strong>
+                <p>
+                    Semua tim wajib mengatur jaringannya masing-masing, dan info
+                    ke wasit ingin bermain di mana.
+                </p>
+            </div>
+
+            <div class="rule-item">
+                <strong>3. Keterlambatan</strong>
+                <p>
+                    Tim yang terlambat lebih dari 15 menit tanpa alasan yang
+                    jelas dapat dikenakan sanksi atau dianggap kalah,
+                    berdasarkan keputusan panitia.
+                </p>
+            </div>
+
+            <div class="rule-item">
+                <strong>4. Roster Pemain</strong>
+                <p>
+                    Hanya pemain yang telah terdaftar dalam roster resmi yang
+                    diperbolehkan mengikuti pertandingan.
+                </p>
+            </div>
+
+            <div class="rule-item">
+                <strong>5. Pause</strong>
+                <p>
+                    Maximal Pause 2x, apabila setelah pick, jaringan kuning. Boleh ulang, 
+                    draf tetap.
+                </p>
+            </div>
+
+            <div class="rule-item">
+                <strong>6. Penggunaan Cheat / Bug</strong>
+                <p>
+                    Penggunaan cheat, script, map hack, exploit, bug abuse,
+                    atau aplikasi pihak ketiga yang memberikan keuntungan
+                    tidak diperbolehkan.
+                </p>
+            </div>
+
+            <div class="rule-item">
+                <strong>7. Perilaku Pemain</strong>
+                <p>
+                    Dilarang bermain SABUN, provokasi, akan ada hukuman jika ketahuan
+                    atau tindakan tidak sportif kepada
+                    pemain maupun panitia.
+                </p>
+            </div>
+
+            <div class="rule-item">
+                <strong>8. Bukti Pertandingan</strong>
+                <p>
+                    Setiap tim wajib menyimpan screenshot atau bukti hasil
+                    pertandingan apabila diperlukan oleh panitia.
+                </p>
+            </div>
+
+            <div class="rule-item">
+                <strong>9. Keputusan Panitia</strong>
+                <p>
+                    Keputusan panitia terkait pelanggaran dan sengketa
+                    pertandingan bersifat final setelah dilakukan pemeriksaan
+                    terhadap bukti yang tersedia.
+                </p>
+            </div>
+
+            <div class="rule-item">
+                <strong>10. Sportivitas</strong>
+                <p>
+                    Seluruh peserta wajib menjaga fair play dan menghormati
+                    lawan selama turnamen berlangsung.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+.rules-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.rules-box h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffd54a;
+    font-size: 24px;
+}
+
+.rule-item {
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.rule-item:last-child {
+    border-bottom: none;
+}
+
+.rule-item strong {
+    display: block;
+    color: #ffd54a;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.rule-item p {
+    color: #ddd;
+    line-height: 1.7;
+    font-size: 14px;
+}
+</style>
 <footer>
 
     SRILANKA MLBB SEASON 2
