@@ -1,3 +1,579 @@
+Bisa banget. 👍 Kamu bisa tambahkan 20 foto di bawah sponsor, dibuat rapi dalam bentuk grid responsif. Di HP akan menyesuaikan otomatis.
+
+Tambahkan CSS ini ke dalam <style> kamu:
+
+/* =====================================================
+   GALLERY 20 FOTO
+===================================================== */
+
+.gallery-section {
+    margin-top: 35px;
+    padding: 30px 20px 35px;
+
+    background: rgba(15,20,34,.94);
+
+    border: 1px solid #252d42;
+    border-radius: 22px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.30);
+}
+
+.gallery-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.gallery-title h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.gallery-title p {
+    color: #69748a;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    background: #111726;
+    border: 1px solid #293249;
+
+    aspect-ratio: 1 / 1;
+
+    transition: .25s;
+}
+
+.gallery-item:hover {
+    border-color: #f5c451;
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35),
+        0 0 20px rgba(245,196,81,.08);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: .3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+
+/* TABLET */
+
+@media(max-width: 900px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+
+/* HP */
+
+@media(max-width: 600px) {
+
+    .gallery-section {
+        padding: 25px 12px 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gallery-title h2 {
+        font-size: 20px;
+    }
+
+}
+
+Lalu tepat di bawah </section> sponsor kamu, sebelum <!-- FOOTER -->, masukkan HTML ini:
+
+HTML Gallery 20 Foto
+<!-- =====================================================
+     GALLERY 20 FOTO
+===================================================== -->
+
+<section class="gallery-section">
+
+    <div class="gallery-title">
+
+        <h2>TOURNAMENT GALLERY</h2>
+
+        <p>
+            Srilanka MLBB Season 2 • Photo Gallery
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+
+        <!-- FOTO 01 -->
+        <div class="gallery-item">
+            <img
+                src="foto1.jpg"
+                alt="Tournament Photo 01"
+            >
+        </div>
+
+
+        <!-- FOTO 02 -->
+        <div class="gallery-item">
+            <img
+                src="foto2.jpg"
+                alt="Tournament Photo 02"
+            >
+        </div>
+
+
+        <!-- FOTO 03 -->
+        <div class="gallery-item">
+            <img
+                src="foto3.jpg"
+                alt="Tournament Photo 03"
+            >
+        </div>
+
+
+        <!-- FOTO 04 -->
+        <div class="gallery-item">
+            <img
+                src="foto4.jpg"
+                alt="Tournament Photo 04"
+            >
+        </div>
+
+
+        <!-- FOTO 05 -->
+        <div class="gallery-item">
+            <img
+                src="foto5.jpg"
+                alt="Tournament Photo 05"
+            >
+        </div>
+
+
+        <!-- FOTO 06 -->
+        <div class="gallery-item">
+            <img
+                src="foto6.jpg"
+                alt="Tournament Photo 06"
+            >
+        </div>
+
+
+        <!-- FOTO 07 -->
+        <div class="gallery-item">
+            <img
+                src="foto7.jpg"
+                alt="Tournament Photo 07"
+            >
+        </div>
+
+
+        <!-- FOTO 08 -->
+        <div class="gallery-item">
+            <img
+                src="foto8.jpg"
+                alt="Tournament Photo 08"
+            >
+        </div>
+
+
+        <!-- FOTO 09 -->
+        <div class="gallery-item">
+            <img
+                src="foto9.jpg"
+                alt="Tournament Photo 09"
+            >
+        </div>
+
+
+        <!-- FOTO 10 -->
+        <div class="gallery-item">
+            <img
+                src="foto10.jpg"
+                alt="Tournament Photo 10"
+            >
+        </div>
+
+
+        <!-- FOTO 11 -->
+        <div class="gallery-item">
+            <img
+                src="foto11.jpg"
+                alt="Tournament Photo 11"
+            >
+        </div>
+
+
+        <!-- FOTO 12 -->
+        <div class="gallery-item">
+            <img
+                src="foto12.jpg"
+                alt="Tournament Photo 12"
+            >
+        </div>
+
+
+        <!-- FOTO 13 -->
+        <div class="gallery-item">
+            <img
+                src="foto13.jpg"
+                alt="Tournament Photo 13"
+            >
+        </div>
+
+
+        <!-- FOTO 14 -->
+        <div class="gallery-item">
+            <img
+                src="foto14.jpg"
+                alt="Tournament Photo 14"
+            >
+        </div>
+
+
+        <!-- FOTO 15 -->
+        <div class="gallery-item">
+            <img
+                src="foto15.jpg"
+                alt="Tournament Photo 15"
+            >
+        </div>
+
+
+        <!-- FOTO 16 -->
+        <div class="gallery-item">
+            <img
+                src="foto16.jpg"
+                alt="Tournament Photo 16"
+            >
+        </div>
+
+
+        <!-- FOTO 17 -->
+        <div class="gallery-item">
+            <img
+                src="foto17.jpg"
+                alt="Tournament Photo 17"
+            >
+        </div>
+
+
+        <!-- FOTO 18 -->
+        <div class="gallery-item">
+            <img
+                src="foto18.jpg"
+                alt="Tournament Photo 18"
+            >
+        </div>
+
+
+        <!-- FOTO 19 -->
+        <div class="gallery-item">
+            <img
+                src="foto19.jpg"
+                alt="Tournament Photo 19"
+            >
+        </div>
+
+
+        <!-- FOTO 20 -->
+        <div class="gallery-item">
+            <img
+                src="foto20.jpg"
+                alt="Tournament Photo 20"
+            >
+        </div>
+
+
+    </div>
+
+</section>
+Hasilnya
+
+Di komputer akan menjadi:
+
+5 × 4
+
+[01] [02] [03] [04] [05]
+[06] [07] [08] [09] [10]
+[11] [12] [13] [14] [15]
+[16] [17] [18] [19] [20]
+
+Di HP otomatis menjadi:
+
+[01] [02]
+[03] [04]
+[05] [06]
+...
+[19] [20]
+
+Tinggal ganti foto1.jpg sampai foto20.jpg dengan link foto masing-masing.
+
+Kalau kamu mau, saya juga bisa buat versi yang ketika foto diklik menjadi besar (popup/lightbox), jadi 20 foto tersebut bisa dilihat satu per satu tanpa keluar dari halaman.
+
+Today 7:19 AM
+kok jadi gini
+
+Iya, kelihatan masalahnya 😄 Bukan HTML-nya yang rusak total, tapi ada 2 hal:
+
+Kamu ikut menempel tulisan ```html dan ``` ke dalam halaman, makanya muncul tulisan ```html.
+foto1.jpg, foto2.jpg, dst. belum merupakan link foto asli, jadi gambarnya muncul sebagai gambar rusak.
+
+Dan CSS gallery kemungkinan belum masuk ke dalam <style>...</style>.
+
+1. Hapus tulisan ini
+
+Di bagian gallery, hapus:
+
+```html
+
+dan bagian paling bawah:
+
+
+Jadi langsung mulai dengan:
+
+```html
+<section class="gallery-section">
+2. Pastikan CSS ini dimasukkan DI DALAM <style>
+
+Letakkan sebelum:
+
+</style>
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-section {
+    margin-top: 35px;
+    padding: 35px 20px 40px;
+
+    background: rgba(15,20,34,.94);
+    border: 1px solid #252d42;
+    border-radius: 22px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.30);
+}
+
+.gallery-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.gallery-title h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.gallery-title p {
+    color: #69748a;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    background: #111726;
+    border: 1px solid #293249;
+    aspect-ratio: 1 / 1;
+    transition: .25s;
+}
+
+.gallery-item:hover {
+    border-color: #f5c451;
+    transform: translateY(-4px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+@media(max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+3. Lalu HTML gallery-nya taruh DI BAWAH sponsor
+
+Cari:
+
+</section>
+
+
+<!-- FOOTER -->
+
+Yang </section> itu adalah penutup sponsor.
+
+Tepat di antaranya, masukkan:
+
+<!-- =====================================================
+     TOURNAMENT GALLERY
+===================================================== -->
+
+<section class="gallery-section">
+
+    <div class="gallery-title">
+
+        <h2>TOURNAMENT GALLERY</h2>
+
+        <p>
+            Srilanka MLBB Season 2 • Photo Gallery
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="FOTO-01.jpg" alt="Tournament Photo 01">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-02.jpg" alt="Tournament Photo 02">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-03.jpg" alt="Tournament Photo 03">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-04.jpg" alt="Tournament Photo 04">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-05.jpg" alt="Tournament Photo 05">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-06.jpg" alt="Tournament Photo 06">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-07.jpg" alt="Tournament Photo 07">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-08.jpg" alt="Tournament Photo 08">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-09.jpg" alt="Tournament Photo 09">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-10.jpg" alt="Tournament Photo 10">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-11.jpg" alt="Tournament Photo 11">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-12.jpg" alt="Tournament Photo 12">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-13.jpg" alt="Tournament Photo 13">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-14.jpg" alt="Tournament Photo 14">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-15.jpg" alt="Tournament Photo 15">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-16.jpg" alt="Tournament Photo 16">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-17.jpg" alt="Tournament Photo 17">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-18.jpg" alt="Tournament Photo 18">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-19.jpg" alt="Tournament Photo 19">
+        </div>
+
+        <div class="gallery-item">
+            <img src="FOTO-20.jpg" alt="Tournament Photo 20">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+Yang paling penting
+
+Kalau foto kamu dari Postimages seperti sponsor tadi, jangan pakai:
+
+<img src="FOTO-01.jpg">
+
+Tetapi pakai URL langsung gambarnya, misalnya:
+
+<img src="https://i.postimg.cc/xxxxx/foto1.jpg">
+
+Jadi setiap foto akan tampil.
+
+Kalau kamu kirim 20 foto di sini, 
+saya bisa bantu susunkan semuanya menjadi 20 link + HTML lengkapnya, jadi kamu tinggal copy-paste dan tidak perlu memasukkan URL satu-satu.
+
+Today 7:26 AM
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -2991,3 +3567,1107 @@ function toggleSection(sectionId, arrowId) {
 
 </body>
 </html>
+
+tolong tambahin html button NAMA TIM & PLAYER
+10 tim, masing2 5 player ya, bantu html nya
+
+Bisa 👍 Saya lihat juga penyebab tampilan sebelumnya: di CSS kamu ada .sponsor-image-box { yang tertulis dua kali, sehingga CSS sponsor ikut rusak.
+
+Untuk bagian baru, kita tambahkan:
+
+Tombol 👥 NAMA TIM & PLAYER
+10 tim
+Masing-masing 5 player
+Bisa dibuka/tutup
+Tampilan rapi mengikuti desain website kamu
+Responsive HP
+Saya letakkan di bawah Sponsor, sebelum Footer
+1. Tambahkan CSS ini
+
+Masukkan CSS berikut sebelum /* FOOTER */:
+
+/* =====================================================
+   TEAM & PLAYER
+===================================================== */
+
+.team-player-section {
+    margin-top: 55px;
+}
+
+.team-player-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-player-title h2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.team-player-title p {
+    color: #69748a;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.team-player-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.team-card {
+    background: rgba(15,20,34,.94);
+    border: 1px solid #252d42;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,.25);
+}
+
+.team-card-header {
+    padding: 17px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            90deg,
+            #171e31,
+            #101522
+        );
+
+    border-bottom: 1px solid #252d42;
+}
+
+.team-card-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.team-number {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5c451,
+            #b97917
+        );
+
+    color: #111;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.team-card-name {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.team-card-group {
+    color: #69748a;
+    font-size: 9px;
+    margin-top: 3px;
+}
+
+.player-count {
+    color: #f5c451;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.player-list {
+    padding: 12px;
+}
+
+.player-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 11px 13px;
+    margin-bottom: 7px;
+
+    border-radius: 10px;
+
+    background: #111726;
+    border: 1px solid #202a3d;
+
+    transition: .2s;
+}
+
+.player-item:last-child {
+    margin-bottom: 0;
+}
+
+.player-item:hover {
+    border-color: #f5c451;
+    transform: translateX(3px);
+}
+
+.player-number {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #1b2335;
+
+    color: #f5c451;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    flex-shrink: 0;
+}
+
+.player-info {
+    flex: 1;
+}
+
+.player-name {
+    color: #d9deea;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.player-role {
+    color: #59647a;
+    font-size: 9px;
+    margin-top: 3px;
+}
+
+.player-id {
+    color: #59647a;
+    font-size: 9px;
+}
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+
+    .team-player-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card-header {
+        padding: 15px;
+    }
+
+    .player-list {
+        padding: 10px;
+    }
+}
+2. Tambahkan HTML ini
+
+Letakkan setelah </section> sponsor dan sebelum <!-- FOOTER -->.
+
+<!-- =====================================================
+     TEAM & PLAYER BUTTON
+===================================================== -->
+
+<div class="section-toggle">
+
+    <button
+        class="toggle-btn"
+        onclick="toggleSection('teamPlayerStage','teamPlayerArrow')"
+    >
+
+        <span class="icon">👥</span>
+
+        <span>NAMA TIM & PLAYER</span>
+
+        <span
+            class="arrow"
+            id="teamPlayerArrow"
+        >
+            ▼
+        </span>
+
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     TEAM & PLAYER
+===================================================== -->
+
+<section
+    id="teamPlayerStage"
+    class="collapsible"
+>
+
+<div class="team-player-section">
+
+    <div class="team-player-title">
+
+        <h2>NAMA TIM & PLAYER</h2>
+
+        <p>
+            10 Teams • 5 Players Each
+        </p>
+
+    </div>
+
+
+    <div class="team-player-grid">
+
+
+        <!-- =================================================
+             TEAM 01
+        ================================================== -->
+
+        <div class="team-card">
+
+            <div class="team-card-header">
+
+                <div class="team-card-header-left">
+
+                    <div class="team-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <div class="team-card-name">
+                            TEAM ALPHA
+                        </div>
+
+                        <div class="team-card-group">
+                            GROUP A
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="player-count">
+                    5 PLAYERS
+                </div>
+
+            </div>
+
+
+            <div class="player-list">
+
+                <div class="player-item">
+                    <div class="player-number">01</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Alpha 01</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">A1</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">02</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Alpha 02</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">A2</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">03</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Alpha 03</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">A3</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">04</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Alpha 04</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">A4</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">05</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Alpha 05</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">A5</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             TEAM 02
+        ================================================== -->
+
+        <div class="team-card">
+
+            <div class="team-card-header">
+
+                <div class="team-card-header-left">
+
+                    <div class="team-number">02</div>
+
+                    <div>
+                        <div class="team-card-name">
+                            TEAM BLAZE
+                        </div>
+
+                        <div class="team-card-group">
+                            GROUP A
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="player-count">
+                    5 PLAYERS
+                </div>
+
+            </div>
+
+            <div class="player-list">
+
+                <div class="player-item">
+                    <div class="player-number">01</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Blaze 01</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">B1</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">02</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Blaze 02</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">B2</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">03</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Blaze 03</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">B3</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">04</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Blaze 04</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">B4</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">05</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Blaze 05</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">B5</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             TEAM 03
+        ================================================== -->
+
+        <div class="team-card">
+
+            <div class="team-card-header">
+
+                <div class="team-card-header-left">
+
+                    <div class="team-number">03</div>
+
+                    <div>
+                        <div class="team-card-name">
+                            TEAM NOVA
+                        </div>
+
+                        <div class="team-card-group">
+                            GROUP A
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="player-count">5 PLAYERS</div>
+
+            </div>
+
+            <div class="player-list">
+
+                <div class="player-item">
+                    <div class="player-number">01</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Nova 01</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">N1</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">02</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Nova 02</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">N2</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">03</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Nova 03</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">N3</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">04</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Nova 04</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">N4</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">05</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Nova 05</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">N5</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEAM 04 -->
+
+        <div class="team-card">
+
+            <div class="team-card-header">
+
+                <div class="team-card-header-left">
+
+                    <div class="team-number">04</div>
+
+                    <div>
+                        <div class="team-card-name">
+                            TEAM STORM
+                        </div>
+
+                        <div class="team-card-group">
+                            GROUP A
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="player-count">5 PLAYERS</div>
+
+            </div>
+
+            <div class="player-list">
+
+                <div class="player-item">
+                    <div class="player-number">01</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Storm 01</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">S1</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">02</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Storm 02</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">S2</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">03</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Storm 03</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">S3</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">04</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Storm 04</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">S4</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">05</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Storm 05</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">S5</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEAM 05 -->
+
+        <div class="team-card">
+
+            <div class="team-card-header">
+
+                <div class="team-card-header-left">
+
+                    <div class="team-number">05</div>
+
+                    <div>
+                        <div class="team-card-name">
+                            TEAM TITAN
+                        </div>
+
+                        <div class="team-card-group">
+                            GROUP A
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="player-count">5 PLAYERS</div>
+
+            </div>
+
+            <div class="player-list">
+
+                <div class="player-item">
+                    <div class="player-number">01</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Titan 01</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">T1</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">02</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Titan 02</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">T2</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">03</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Titan 03</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">T3</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">04</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Titan 04</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">T4</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">05</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Titan 05</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">T5</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEAM 06 -->
+
+        <div class="team-card">
+
+            <div class="team-card-header">
+
+                <div class="team-card-header-left">
+
+                    <div class="team-number">06</div>
+
+                    <div>
+                        <div class="team-card-name">
+                            TEAM PHOENIX
+                        </div>
+
+                        <div class="team-card-group">
+                            GROUP B
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="player-count">5 PLAYERS</div>
+
+            </div>
+
+            <div class="player-list">
+
+                <div class="player-item">
+                    <div class="player-number">01</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Phoenix 01</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">P1</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">02</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Phoenix 02</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">P2</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">03</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Phoenix 03</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">P3</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">04</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Phoenix 04</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">P4</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">05</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Phoenix 05</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">P5</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEAM 07 -->
+
+        <div class="team-card">
+
+            <div class="team-card-header">
+
+                <div class="team-card-header-left">
+
+                    <div class="team-number">07</div>
+
+                    <div>
+                        <div class="team-card-name">
+                            TEAM VORTEX
+                        </div>
+
+                        <div class="team-card-group">
+                            GROUP B
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="player-count">5 PLAYERS</div>
+
+            </div>
+
+            <div class="player-list">
+
+                <div class="player-item">
+                    <div class="player-number">01</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Vortex 01</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">V1</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">02</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Vortex 02</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">V2</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">03</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Vortex 03</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">V3</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">04</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Vortex 04</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">V4</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">05</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Vortex 05</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">V5</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEAM 08 -->
+
+        <div class="team-card">
+
+            <div class="team-card-header">
+
+                <div class="team-card-header-left">
+
+                    <div class="team-number">08</div>
+
+                    <div>
+                        <div class="team-card-name">
+                            TEAM ECLIPSE
+                        </div>
+
+                        <div class="team-card-group">
+                            GROUP B
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="player-count">5 PLAYERS</div>
+
+            </div>
+
+            <div class="player-list">
+
+                <div class="player-item">
+                    <div class="player-number">01</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Eclipse 01</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">E1</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">02</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Eclipse 02</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">E2</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">03</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Eclipse 03</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">E3</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">04</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Eclipse 04</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">E4</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">05</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Eclipse 05</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">E5</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEAM 09 -->
+
+        <div class="team-card">
+
+            <div class="team-card-header">
+
+                <div class="team-card-header-left">
+
+                    <div class="team-number">09</div>
+
+                    <div>
+                        <div class="team-card-name">
+                            TEAM VENOM
+                        </div>
+
+                        <div class="team-card-group">
+                            GROUP B
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="player-count">5 PLAYERS</div>
+
+            </div>
+
+            <div class="player-list">
+
+                <div class="player-item">
+                    <div class="player-number">01</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Venom 01</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">V01</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">02</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Venom 02</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">V02</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">03</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Venom 03</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">V03</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">04</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Venom 04</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">V04</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">05</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Venom 05</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">V05</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEAM 10 -->
+
+        <div class="team-card">
+
+            <div class="team-card-header">
+
+                <div class="team-card-header-left">
+
+                    <div class="team-number">10</div>
+
+                    <div>
+                        <div class="team-card-name">
+                            TEAM INFERNO
+                        </div>
+
+                        <div class="team-card-group">
+                            GROUP B
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="player-count">5 PLAYERS</div>
+
+            </div>
+
+            <div class="player-list">
+
+                <div class="player-item">
+                    <div class="player-number">01</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Inferno 01</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">I1</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">02</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Inferno 02</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">I2</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">03</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Inferno 03</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">I3</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">04</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Inferno 04</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">I4</div>
+                </div>
+
+                <div class="player-item">
+                    <div class="player-number">05</div>
+                    <div class="player-info">
+                        <div class="player-name">Player Inferno 05</div>
+                        <div class="player-role">PLAYER</div>
+                    </div>
+                    <div class="player-id">I5</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+3. Perbaiki bagian sponsor kamu
+
+Di kode kamu sekarang ada kesalahan ini:
+
+.sponsor-image-box {
+  .sponsor-image-box {
+
+Hapus satu .sponsor-image-box {, sehingga menjadi:
+
+.sponsor-image-box {
+    width: 260px;
+    margin: auto;
+    padding: 8px;
+    background: #0d111d;
+    border: 1px solid #30394d;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.30);
+}
+
+Jadi urutan website kamu nanti:
+
+GROUP STAGE
+↓
+PLAYOFF BRACKET
+↓
+MATCH SCHEDULE
+↓
+OFFICIAL SPONSOR
+↓
+👥 NAMA TIM & PLAYER
+↓
+10 tim × 5 player
+↓
+FOOTER
+
+Nama Player Alpha 01, dll tinggal kamu ganti dengan nama asli pemain.
+
+Kalau kamu mau, saya juga bisa 
+gabungkan semuanya menjadi 1 HTML lengkap dari kode kamu di atas, sekalian saya 
+rapikan bug sponsor dan bikin setiap tim bisa diklik untuk membuka 5 player-nya supaya tampilannya lebih profesional.
