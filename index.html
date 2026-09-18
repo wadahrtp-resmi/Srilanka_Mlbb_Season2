@@ -1377,6 +1377,412 @@ footer {
 /* =====================================================
    RESPONSIVE
 ===================================================== */
+/* =====================================================
+   MVP & SAVAGE
+===================================================== */
+
+.mvp-savage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.award-panel {
+    background:
+        rgba(15,20,34,.94);
+
+    border: 1px solid #252d42;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,.30);
+}
+
+.award-header {
+    padding: 20px 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            90deg,
+            #171e31,
+            #101522
+        );
+
+    border-bottom: 1px solid #252d42;
+}
+
+.award-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.award-icon {
+   width: 58px;
+    height: 58px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.award-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    font-size: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5c451,
+            #b97917
+        );
+
+    box-shadow:
+        0 0 20px rgba(245,196,81,.15);
+}
+
+.savage-panel .award-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #ff5c5c,
+            #a91616
+        );
+
+    box-shadow:
+        0 0 20px rgba(255,70,70,.18);
+}
+
+.award-header h3 {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.award-header p {
+    color: #69748a;
+    font-size: 9px;
+    margin-top: 4px;
+}
+
+.award-badge {
+    padding: 6px 9px;
+
+    border-radius: 20px;
+
+    color: #f5c451;
+
+    border: 1px solid rgba(245,196,81,.3);
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.savage-panel .award-badge {
+    color: #ff7777;
+    border-color: rgba(255,80,80,.3);
+}
+
+
+/* MVP ROW */
+
+.mvp-list,
+.savage-list {
+    padding: 14px;
+}
+
+.mvp-card,
+.savage-card {
+
+    display: grid;
+
+    grid-template-columns:
+        42px 1fr auto;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    margin-bottom: 8px;
+
+    border-radius: 11px;
+
+    background: #111726;
+
+    border: 1px solid transparent;
+
+    transition: .25s;
+}
+
+.mvp-card:last-child,
+.savage-card:last-child {
+    margin-bottom: 0;
+}
+
+.mvp-card:hover {
+
+    border-color: #f5c451;
+
+    transform:
+        translateX(4px);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245,196,81,.08),
+            #111726
+        );
+}
+
+.savage-card:hover {
+
+    border-color: #ff5555;
+
+    transform:
+        translateX(4px);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,70,70,.08),
+            #111726
+        );
+}
+
+
+/* RANK */
+
+.award-rank {
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        rgba(245,196,81,.10);
+
+    color: #f5c451;
+
+    font-size: 12px;
+
+    font-weight: 900;
+}
+
+.mvp-card:nth-child(1) .award-rank {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe79a,
+            #d49b20
+        );
+
+    color: #111;
+
+    box-shadow:
+        0 0 15px rgba(245,196,81,.25);
+}
+
+.mvp-card:nth-child(2) .award-rank {
+    color: #d8dce5;
+    background: rgba(210,215,225,.10);
+}
+
+.mvp-card:nth-child(3) .award-rank {
+    color: #d99a62;
+    background: rgba(180,100,50,.10);
+}
+
+
+/* PLAYER */
+
+.award-player {
+    min-width: 0;
+}
+
+.award-player-name {
+
+    color: #e5e8ef;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.award-player-team {
+
+    color: #69748a;
+
+    font-size: 9px;
+
+    margin-top: 4px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .7px;
+}
+
+
+/* STAT */
+
+.award-stat {
+
+    text-align: right;
+}
+
+.award-stat strong {
+
+    display: block;
+
+    color: #f5c451;
+
+    font-size: 15px;
+
+    font-weight: 900;
+}
+
+.award-stat span {
+
+    color: #59647a;
+
+    font-size: 8px;
+
+    letter-spacing: .7px;
+}
+
+
+/* SAVAGE */
+
+.savage-count {
+
+    min-width: 58px;
+
+    padding: 7px 8px;
+
+    border-radius: 9px;
+
+    text-align: center;
+
+    background:
+        rgba(255,60,60,.08);
+
+    border:
+        1px solid rgba(255,60,60,.18);
+}
+
+.savage-count strong {
+
+    display: block;
+
+    color: #ff6868;
+
+    font-size: 17px;
+
+    font-weight: 900;
+}
+
+.savage-count span {
+
+    color: #8d5960;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+/* EMPTY */
+
+.award-empty {
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    color: #59647a;
+
+    font-size: 11px;
+
+    border: 1px dashed #293249;
+
+    border-radius: 12px;
+}
+
+.award-empty .empty-icon {
+
+    display: block;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+
+    opacity: .6;
+}
+
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+
+    .mvp-savage-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .award-header {
+        padding: 16px;
+    }
+
+    .mvp-list,
+    .savage-list {
+        padding: 10px;
+    }
+
+    .mvp-card,
+    .savage-card {
+        padding: 11px;
+    }
+
+    .award-player-name {
+        font-size: 12px;
+    }
+
+}
 
 @media(max-width: 900px) {
 
@@ -2196,7 +2602,7 @@ footer {
     <div class="match">
 
         <div class="match-title">
-            SEMIFINAL  BO7
+            SEMIFINAL
         </div>
 
         <div class="player">
@@ -4654,6 +5060,444 @@ footer {
 
 
 </div>
+
+</section>
+
+<!-- =====================================================
+     MVP & SAVAGE BUTTON
+===================================================== -->
+
+<div class="section-toggle">
+
+    <button
+        class="toggle-btn"
+        onclick="toggleSection('mvpSavageStage','mvpSavageArrow')"
+    >
+
+        <span class="icon">
+            🏆
+        </span>
+
+        <span>
+            TOP MVP & SAVAGE
+        </span>
+
+        <span
+            class="arrow"
+            id="mvpSavageArrow"
+        >
+            ▼
+        </span>
+
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     MVP & SAVAGE
+===================================================== -->
+
+<section
+    id="mvpSavageStage"
+    class="collapsible"
+>
+
+    <div class="players-title">
+
+        <h2>
+            MVP & SAVAGE
+        </h2>
+
+        <p>
+            Top Player Performance • Season 2
+        </p>
+
+    </div>
+
+
+    <div class="mvp-savage-grid">
+
+
+        <!-- =============================================
+             TOP 5 MVP
+        ============================================== -->
+
+        <div class="award-panel">
+
+    <div class="award-header">
+
+        <div class="award-header-left">
+
+            <div class="award-icon">
+                <img src="https://i.ibb.co/67b6bW4j/mov.jpg" alt="MPV">
+            </div>
+
+                    <div>
+
+                        <h3>
+                            TOP 5 MVP
+                        </h3>
+
+                        <p>
+                            PLAYER OF THE TOURNAMENT
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="award-badge">
+                    TOP 5
+                </div>
+
+            </div>
+
+
+            <div class="mvp-list">
+
+
+                <!-- MVP #1 -->
+
+                <div class="mvp-card">
+
+                    <div class="award-rank">
+                        01
+                    </div>
+
+                    <div class="award-player">
+
+                        <div class="award-player-name">
+                             Belum Ditentukan
+                        </div>
+
+                        <div class="award-player-team">
+                            —
+                        </div>
+
+                    </div>
+
+                    <div class="award-stat">
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span>
+                            MVP POINT
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MVP #2 -->
+
+                <div class="mvp-card">
+
+                    <div class="award-rank">
+                        02
+                    </div>
+
+                    <div class="award-player">
+
+                        <div class="award-player-name">
+                            Belum Ditentukan
+                        </div>
+
+                        <div class="award-player-team">
+                            —
+                        </div>
+
+                    </div>
+
+                    <div class="award-stat">
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span>
+                            MVP POINT
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MVP #3 -->
+
+                <div class="mvp-card">
+
+                    <div class="award-rank">
+                        03
+                    </div>
+
+                    <div class="award-player">
+
+                        <div class="award-player-name">
+                            Belum Ditentukan
+                        </div>
+
+                        <div class="award-player-team">
+                            —
+                        </div>
+
+                    </div>
+
+                    <div class="award-stat">
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span>
+                            MVP POINT
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MVP #4 -->
+
+                <div class="mvp-card">
+
+                    <div class="award-rank">
+                        04
+                    </div>
+
+                    <div class="award-player">
+
+                        <div class="award-player-name">
+                            Belum Ditentukan
+                        </div>
+
+                        <div class="award-player-team">
+                            —
+                        </div>
+
+                    </div>
+
+                    <div class="award-stat">
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span>
+                            MVP POINT
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MVP #5 -->
+
+                <div class="mvp-card">
+
+                    <div class="award-rank">
+                        05
+                    </div>
+
+                    <div class="award-player">
+
+                        <div class="award-player-name">
+                            Belum Ditentukan
+                        </div>
+
+                        <div class="award-player-team">
+                            —
+                        </div>
+
+                    </div>
+
+                    <div class="award-stat">
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span>
+                            MVP POINT
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             SAVAGE
+        ============================================== -->
+
+        <div class="award-panel savage-panel">
+
+            <div class="award-header">
+
+                <div class="award-header-left">
+
+                    <div class="award-icon">
+                    <img src="https://i.ibb.co/Rp6btv06/images-2.jpg" alt="Savage">
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            SAVAGE
+                        </h3>
+
+                        <p>
+                            SAVAGE ACHIEVEMENT
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="award-badge">
+                    SEASON 2
+                </div>
+
+            </div>
+
+
+            <div class="savage-list">
+
+
+                <!-- SAVAGE 01 -->
+
+                <div class="savage-card">
+
+                    <div class="award-rank">
+                        01
+                    </div>
+
+                    <div class="award-player">
+
+                        <div class="award-player-name">
+                            Belum Ditentukan
+                        </div>
+
+                        <div class="award-player-team">
+                            —
+                        </div>
+
+                    </div>
+
+                    <div class="savage-count">
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span>
+                            SAVAGE
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SAVAGE 02 -->
+
+                <div class="savage-card">
+
+                    <div class="award-rank">
+                        02
+                    </div>
+
+                    <div class="award-player">
+
+                        <div class="award-player-name">
+                            Belum Ditentukan
+                        </div>
+
+                        <div class="award-player-team">
+                            —
+                        </div>
+
+                    </div>
+
+                    <div class="savage-count">
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span>
+                            SAVAGE
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SAVAGE 03 -->
+
+                <div class="savage-card">
+
+                    <div class="award-rank">
+                        03
+                    </div>
+
+                    <div class="award-player">
+
+                        <div class="award-player-name">
+                            Belum Ditentukan
+                        </div>
+
+                        <div class="award-player-team">
+                            —
+                        </div>
+
+                    </div>
+
+                    <div class="savage-count">
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span>
+                            SAVAGE
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BELUM ADA SAVAGE -->
+
+                <div class="award-empty">
+
+                    <span class="empty-icon">
+                        ⚔️
+                    </span>
+
+                    Kalo ada yang savage boleh ss, biar ditempel di sini
+                   
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
