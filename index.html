@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -1514,6 +1515,97 @@ footer {
 
 }
 
+
+/* =====================================================
+   HERO PHOTO MARQUEE
+===================================================== */
+
+.hero-marquee {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-bottom: 35px;
+    overflow: hidden;
+    position: relative;
+    padding: 6px 0;
+    background: rgba(0,0,0,.18);
+    border-top: 1px solid rgba(245,196,81,.15);
+    border-bottom: 1px solid rgba(245,196,81,.15);
+}
+
+.hero-track {
+    display: flex;
+    width: max-content;
+    animation: heroScroll 55s linear infinite;
+    will-change: transform;
+}
+
+.hero-set {
+    display: flex;
+    gap: 14px;
+    padding-right: 14px;
+    flex-shrink: 0;
+}
+
+.hero-photo {
+    width: 190px;
+    height: 110px;
+    flex: 0 0 190px;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid #30394d;
+    background: #111726;
+    box-shadow: 0 8px 25px rgba(0,0,0,.35);
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+
+.hero-photo:hover img {
+    transform: scale(1.08);
+}
+
+.hero-marquee:hover .hero-track {
+    animation-play-state: paused;
+}
+
+@keyframes heroScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-track {
+        animation-duration: 42s;
+    }
+
+    .hero-set {
+        gap: 9px;
+        padding-right: 9px;
+    }
+
+    .hero-photo {
+        width: 130px;
+        height: 78px;
+        flex-basis: 130px;
+        border-radius: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-track {
+        animation: none;
+    }
+}
+
 </style>
 </head>
 
@@ -1523,7 +1615,12 @@ footer {
 <div class="container">
 
 
+
+
+
 <!-- =====================================================
+     HERO PHOTO MARQUEE - 20 FOTO, BERGERAK KANAN -> KIRI
+===================================================== --><!-- =====================================================
      HEADER
 ===================================================== -->
 
@@ -2011,6 +2108,7 @@ footer {
 <div class="round">
 
     <div class="round-title">
+        SEMIFINAL BO7
     </div>
 
     <div class="match">
@@ -2099,7 +2197,7 @@ footer {
     <div class="match">
 
         <div class="match-title">
-            SEMIFINAL BO7
+            SEMIFINAL
         </div>
 
         <div class="player">
@@ -4590,6 +4688,58 @@ footer {
     </button>
 
 </div>
+
+<section class="hero-marquee" aria-label="20 foto hero">
+    <div class="hero-track">
+        <div class="hero-set">
+            <div class="hero-photo"><img src="https://i.ibb.co/Xr8Pm58M/image.png" alt="Hero 1" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/3qKC70S/image.png" alt="Hero 2" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/NdHTzmDq/image.png" alt="Hero 3" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/5hNV8fT3/image.png" alt="Hero 4" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/ksV0w4pw/image.png" alt="Hero 5" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/dRDJncG/image.png" alt="Hero 6" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://github.com/Lara3924/Lara_Image/raw/main/Beatrix%20-%20Hero1051.png" alt="Hero 7" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://github.com/Lara3924/Lara_Image/raw/main/Gloo%20-%20Hero1041.png" alt="Hero 8" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/fdP6Pg7g/image.png" alt="Hero 9" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/M52RDGnc/image.png" alt="Hero 10" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/vC4fn5fw/image.png" alt="Hero 11" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/nNCw0cwT/image.png" alt="Hero 12" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/CKm1yf0F/image.png" alt="Hero 13" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/G4RNbfKd/image.png" alt="Hero 14" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/xqbmqzQh/image.png" alt="Hero 15" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/svfnXw9h/image.png" alt="Hero 16" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://github.com/Lara3924/Lara_Image/raw/main/Yu%20Zhong%20-%20Hero951.png" alt="Hero 17" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://github.com/Lara3924/Lara_Image/raw/main/Popol%20and%20Kupa%20-%20Hero941.png" alt="Hero 18" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/XfFV6dY8/image.png" alt="Hero 19" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/v6jfDsLb/image.png" alt="Hero 20" loading="lazy"></div>
+        </div>
+
+        <!-- Duplikasi set agar animasi berjalan mulus tanpa jeda -->
+        <div class="hero-set" aria-hidden="true">
+            <div class="hero-photo"><img src="https://i.ibb.co/Xr8Pm58M/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/3qKC70S/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/NdHTzmDq/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/5hNV8fT3/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/ksV0w4pw/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/dRDJncG/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://github.com/Lara3924/Lara_Image/raw/main/Beatrix%20-%20Hero1051.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://github.com/Lara3924/Lara_Image/raw/main/Gloo%20-%20Hero1041.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/fdP6Pg7g/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/M52RDGnc/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/vC4fn5fw/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/nNCw0cwT/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/CKm1yf0F/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/G4RNbfKd/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/xqbmqzQh/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/svfnXw9h/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://github.com/Lara3924/Lara_Image/raw/main/Yu%20Zhong%20-%20Hero951.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://github.com/Lara3924/Lara_Image/raw/main/Popol%20and%20Kupa%20-%20Hero941.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/XfFV6dY8/image.png" alt="" loading="lazy"></div>
+            <div class="hero-photo"><img src="https://i.ibb.co/v6jfDsLb/image.png" alt="" loading="lazy"></div>
+        </div>
+    </div>
+</section>
+
 
 
 <!-- =====================================================
